@@ -15,6 +15,7 @@
         android:layout_weight="8"
         android:alignmentMode="alignMargins"
         android:columnCount="2"
+        android:background="#17202A"
 
         android:columnOrderPreserved="false"
         android:padding="14dp"
@@ -28,6 +29,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_rowWeight="1"
+
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">
 
@@ -40,17 +42,18 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/timetable1" />
+                    android:src="@drawable/icon_timetable" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Timetable"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@android:color/darker_gray"
                     android:textSize="18dp"
                     android:textStyle="bold"/>
 
@@ -80,18 +83,19 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/timetable1" />
+                    android:src="@drawable/icon_event" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Timetable"
+                    android:text="Event Enrollment"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/darker_gray"
                     android:textSize="18dp"
+                    android:layout_marginTop="20dp"
                     android:textStyle="bold"/>
 
 
@@ -121,18 +125,19 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/timetable1" />
+                    android:src="@drawable/icon_ia" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Timetable"
+                    android:text="IA Timetable"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/darker_gray"
                     android:textSize="18dp"
+                    android:layout_marginTop="20dp"
                     android:textStyle="bold"/>
 
 
@@ -161,18 +166,19 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/timetable1" />
+                    android:src="@drawable/icon_feedback" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Timetable"
+                    android:text="Feedback Form"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/darker_gray"
                     android:textSize="18dp"
+                    android:layout_marginTop="20dp"
                     android:textStyle="bold"/>
 
 
@@ -201,18 +207,19 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/timetable1" />
+                    android:src="@drawable/icon_placement" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Timetable"
+                    android:text="Placement Updates"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/darker_gray"
                     android:textSize="18dp"
+                    android:layout_marginTop="20dp"
                     android:textStyle="bold"/>
 
 
@@ -241,18 +248,19 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/timetable1" />
+                    android:src="@drawable/icon_holiday" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Timetable"
+                    android:text="holidays"
                     android:textAlignment="center"
-                    android:textColor="@android:color/black"
+                    android:textColor="@android:color/darker_gray"
                     android:textSize="18dp"
+                    android:layout_marginTop="20dp"
                     android:textStyle="bold"/>
 
 
