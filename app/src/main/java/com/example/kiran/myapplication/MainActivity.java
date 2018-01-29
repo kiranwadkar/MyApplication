@@ -1,50 +1,80 @@
 package com.example.kiran.myapplication;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.Editable;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import static android.os.Build.ID;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText username,password;
+
     Button login;
     RequestQueue requestQueue;
-    String server_url="http://192.168.1.103/select.php";
-   // AlertDialog.Builder builder;
-   // String susername;
-  //  String spassword;
+    String server_url="http://192.168.1.5/api/login";
+    AlertDialog.Builder builder;
+    String  semail;
+    String spassword;
+    public static final String MyPREFERENCES = "MyPrefs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final EditText username = (EditText)findViewById(R.id.username);
+        final EditText email = (EditText)findViewById(R.id.username);
         final EditText password = (EditText)findViewById(R.id.password);
         Button login = (Button)findViewById(R.id.login);
-        //builder = new AlertDialog.Builder(MainActivity.this);
-       // requestQueue = Volley.newRequestQueue(this);
+        builder = new AlertDialog.Builder(MainActivity.this);
+        requestQueue = Volley.newRequestQueue(this);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-               String  susername = username.getText().toString();
-               String spassword = password.getText().toString();
+
+
+
+               semail = email.getText().toString();
+               spassword = password.getText().toString();
+
+                if(isValidEmail(semail)){
+                    if(isValidPassword(spassword)){
+                        validate();//change kelay
+                        // Toast.makeText(getBaseContext(),"valid",Toast.LENGTH_SHORT).show();
+
+                    }
+                    else{
+                        password.setError("Password should atleast 5 characters");
+                    }
+
+                }
+                else{
+                    email.setError("Invalid Email");
+                }
+
+
+/*
                 if((susername).equals("admin")&&(spassword).equals("admin123")){
                     Toast.makeText(getBaseContext(),"Login Successful",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getBaseContext(),Dashboard.class);
@@ -53,45 +83,92 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     Toast.makeText(getBaseContext(),"Please enter correct creaditials",Toast.LENGTH_SHORT).show();
                 }
-/*
-                susername = username.getText().toString();
-                spassword = password.getText().toString();
+*/
 
-                if(isValidEmail(susername)){
-                    if(isValidPassword(spassword)){
-                        validate();//change kelay
-                        // Toast.makeText(getBaseContext(),"valid",Toast.LENGTH_SHORT).show();
+            }
 
-                    }
-                    else{
-                        password.setError("Password should contain 7 characters");
-                    }
+            private void validate() {
+                server_url = server_url+"/"+semail+"/"+spassword;
+                Log.i("Server url","Full url "+server_url);
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, server_url, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        builder.setTitle("server responses");
+                        builder.setMessage("Responses:" + response);
+                        SharedPreferences sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString(ID,response);
+                        editor.commit();
 
-                }
-                else{
-                    username.setError("Invalid Email");
-                }*/
-/*
-                JsonObjectRequest  jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, "http://192.168.0.104/select.php",
-
-                        new Response.Listener<JSONObject>() {
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
-                            public void onResponse(JSONObject response) {
-                                JSONArray jsonArray = response.getJSONArray()
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                email.setText("");
+                                password.setText("");
                             }
-                        }, new Response.ErrorListener() {
+                        });
+
+                        AlertDialog alertDialog = builder.create();
+                        alertDialog.show();
+                        if(response.contains("unvalid")){
+
+                            Toast.makeText(MainActivity.this, "Invalid", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            // response.setShouldCache(false);
+                            Intent i11 = new Intent(getBaseContext(),Dashboard.class);
+                            startActivity(i11);
+
+                        }
+                    }
+                }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        Toast.makeText(getBaseContext(),"Error",Toast.LENGTH_SHORT).show();
+                        error.printStackTrace();
                     }
-                });
-                String strusername = String.valueOf(username.getText());
-                String strpassword = String.valueOf(password.getText());
+                }){
+                    @Override
+                    protected Map<String, String> getParams() throws AuthFailureError {
+                        Map<String,String> params = new HashMap<String, String>();
 
-*/
+                        params.put("email",semail);
+                        params.put("password",spassword);
+                        return params;
+                    }
+
+                };
+                // RequestQueue queue;
+                //queue = MySingleton.getmInstance(this.getApplicationContext()).getRequestQueue();
+                //RequestQueue requestQueue = Volley.newRequestQueue(this);
+                // requestQueue.add(stringRequest);
+                //queue.getCache().clear();
+                //stringRequest.setShouldCache(false);
+                //requestQueue.getCache().clear();
+                //queue.add(stringRequest);
+                //MySingleton.getmInstance(getBaseContext()).addToRequestQueue(stringRequest);
+                requestQueue.add(stringRequest);
+            }
+
+
+            private boolean isValidPassword(String pass) {
+                if (pass != null && pass.length() > 5) {
+                    return true;
+                }
+                return false;
+            }
+
+            private boolean isValidEmail(String semail) {
+                String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+
+                Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+                Matcher matcher = pattern.matcher(semail);
+                return matcher.matches();
             }
 
         });
+
     }
 
 }

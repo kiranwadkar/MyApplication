@@ -3,6 +3,7 @@
     package="com.example.kiran.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -19,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Dashboard" />
-        <activity android:name=".Commitees"></activity>
+        <activity android:name=".Commitees" />
+        <activity android:name=".Holidays"></activity>
     </application>
 
 </manifest>

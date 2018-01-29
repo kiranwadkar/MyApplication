@@ -41,7 +41,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/commitee_acm" />
+                    android:src="@drawable/vit_acm" />
 <!--
                <TextView
                     android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/icon_cesa" />
+                    android:src="@drawable/commitee_acm" />
 
 
 
@@ -117,7 +117,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/eesa" />
+                    android:src="@drawable/commitee_acm" />
 
 
 
@@ -149,7 +149,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/" />
+                    android:src="@drawable/vit_cesa" />
 
 
 
@@ -182,17 +182,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/icon_placement" />
+                    android:src="@drawable/commitee_acm" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Placement Updates"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="18dp"
-                    android:layout_marginTop="20dp"
-                    android:textStyle="bold"/>
 
 
             </LinearLayout>
@@ -223,17 +214,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/icon_holiday" />
+                    android:src="@drawable/commitee_acm" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="holidays"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="18dp"
-                    android:layout_marginTop="20dp"
-                    android:textStyle="bold"/>
 
 
             </LinearLayout>
