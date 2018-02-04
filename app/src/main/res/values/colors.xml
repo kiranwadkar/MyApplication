@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+
+ <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 </resources>
+
+
+
+    <!--
+    <resources>
+    <color name="primaryColor">#e040fb</color>
+    <color name="primaryLightColor">#ff79ff</color>
+    <color name="primaryDarkColor">#aa00c7</color>
+    <color name="secondaryColor">#651fff</color>
+    <color name="secondaryLightColor">#a255ff</color>
+    <color name="secondaryDarkColor">#0100ca</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#ffffff</color>
+    </resources>
+     -->
+<!--
+<resources>
+<color name="primaryColor">#536dfe</color>
+<color name="primaryLightColor">#8f9bff</color>
+<color name="primaryDarkColor">#0043ca</color>
+<color name="secondaryColor">#651fff</color>
+<color name="secondaryLightColor">#a255ff</color>
+<color name="secondaryDarkColor">#0100ca</color>
+<color name="primaryTextColor">#000000</color>
+<color name="secondaryTextColor">#ffffff</color>
+</resources>
+-->
+<!--
+<resources>
+<color name="primaryColor">#00b8d4</color>
+<color name="primaryLightColor">#62ebff</color>
+<color name="primaryDarkColor">#0088a3</color>
+<color name="secondaryColor">#26c6da</color>
+<color name="secondaryLightColor">#6ff9ff</color>
+<color name="secondaryDarkColor">#0095a8</color>
+<color name="primaryTextColor">#000000</color>
+<color name="secondaryTextColor">#000000</color>
+</resources>
+-->
+
+<!--
+<resources>
+<color name="primaryColor">#ffd740</color>
+<color name="primaryLightColor">#ffff74</color>
+<color name="primaryDarkColor">#c8a600</color>
+<color name="secondaryColor">#ccff90</color>
+<color name="secondaryLightColor">#ffffc2</color>
+<color name="secondaryDarkColor">#99cc60</color>
+<color name="primaryTextColor">#000000</color>
+<color name="secondaryTextColor">#000000</color>
+</resources>
+-->
+<!--
+<resources>
+<color name="primaryColor">#ff3d00</color>
+<color name="primaryLightColor">#ff7539</color>
+<color name="primaryDarkColor">#c30000</color>
+<color name="secondaryColor">#ccff90</color>
+<color name="secondaryLightColor">#ffffc2</color>
+<color name="secondaryDarkColor">#99cc60</color>
+<color name="primaryTextColor">#000000</color>
+<color name="secondaryTextColor">#000000</color>
+</resources>
+-->

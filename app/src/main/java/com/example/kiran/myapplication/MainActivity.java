@@ -1,10 +1,10 @@
 package com.example.kiran.myapplication;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -25,14 +25,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import static android.os.Build.ID;
 
 public class MainActivity extends AppCompatActivity {
 
 
     Button login;
     RequestQueue requestQueue;
-    String server_url="http://192.168.1.5/api/login";
+    String server_url="http://192.168.0.103:80/api/login";
     AlertDialog.Builder builder;
     String  semail;
     String spassword;
@@ -95,10 +94,19 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         builder.setTitle("server responses");
                         builder.setMessage("Responses:" + response);
+                        /*
                         SharedPreferences sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString(ID,response);
                         editor.commit();
+                        */
+                        SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                        SharedPreferences.Editor editor = m.edit();
+                        editor.putString("Response", response);
+                        editor.commit();
+
+
+
 
                         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
@@ -110,15 +118,15 @@ public class MainActivity extends AppCompatActivity {
 
                         AlertDialog alertDialog = builder.create();
                         alertDialog.show();
-                        if(response.contains("unvalid")){
-
-                            Toast.makeText(MainActivity.this, "Invalid", Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            // response.setShouldCache(false);
+                        if(response.contains("success")){
                             Intent i11 = new Intent(getBaseContext(),Dashboard.class);
                             startActivity(i11);
 
+
+                        }
+                        else{
+                            // response.setShouldCache(false);
+                            Toast.makeText(MainActivity.this, "Invalid", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }, new Response.ErrorListener() {
