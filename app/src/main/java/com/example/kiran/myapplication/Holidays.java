@@ -43,7 +43,7 @@ public class Holidays extends AppCompatActivity {
         });
     }
     private void jsonparse(){
-        String jsonurl="http://192.168.0.103:80/api/holidays";
+        String jsonurl="http://172.16.18.71:80/api/holidays";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, jsonurl, null, new Response.Listener<JSONObject>() {
             @Override
@@ -58,6 +58,9 @@ public class Holidays extends AppCompatActivity {
                        // i = holiday1.getInt("date");
                         String date =holiday1.getString("date");
                         tv1.append(name+date+"\n\n");
+
+
+
 
                     }
                 } catch (JSONException e) {

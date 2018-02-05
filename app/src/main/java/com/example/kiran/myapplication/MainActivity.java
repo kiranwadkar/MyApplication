@@ -1,6 +1,5 @@
 package com.example.kiran.myapplication;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,16 +12,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
-import java.util.HashMap;
-import java.util.Map;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
     Button login;
     RequestQueue requestQueue;
-    String server_url="http://192.168.0.103:80/api/login";
+    String server_url="http://172.16.18.71:80/api/login";
     AlertDialog.Builder builder;
     String  semail;
     String spassword;
-    public static final String MyPREFERENCES = "MyPrefs";
+   // public static final String MyPREFERENCES = "MyPrefs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,22 +88,92 @@ public class MainActivity extends AppCompatActivity {
             private void validate() {
                 server_url = server_url+"/"+semail+"/"+spassword;
                 Log.i("Server url","Full url "+server_url);
+
+                JsonObjectRequest jsonObject = new JsonObjectRequest(Request.Method.GET,server_url,null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try{
+
+                            JSONObject jsonObject2 = response.getJSONObject("Profile");
+                            String name = jsonObject2.getString("name");
+                            String roll = jsonObject2.getString("roll");
+                            String email1 = jsonObject2.getString("email");
+                            String branch = jsonObject2.getString("branch");
+                            String year = jsonObject2.getString("year");
+                            String division = jsonObject2.getString("division");
+
+                            SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                            SharedPreferences.Editor editor = m.edit();
+                            editor.putString("Name",name);
+                            editor.putString("Roll",roll);
+                            editor.putString("Email",email1);
+                            editor.putString("Branch",branch);
+                            editor.putString("Year",year);
+                            editor.putString("Division",division);
+                            editor.commit();
+
+                           // Log.i("Name",name);
+                           /* builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    email.setText("");
+                                    password.setText("");
+                                }
+                            });*/
+                            AlertDialog alertDialog = builder.create();
+                            alertDialog.show();
+                            String s = response.getString("MESSAGE");
+                            Log.i("msg",s);
+                            if(s.contains("success")){
+                                //contains("success")
+                                email.setText("");
+                                password.setText("");
+                                Intent i11 = new Intent(getBaseContext(),Dashboard.class);
+                                startActivity(i11);
+
+
+                            }
+                            else{
+                                Log.i("Invalid","Testing");
+                                Toast.makeText(getBaseContext(),"Invalid Input",Toast.LENGTH_SHORT).show();;
+                            }
+
+                        }
+                        catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getBaseContext(),"Error",Toast.LENGTH_SHORT).show();
+                        error.printStackTrace();
+                    }
+                });
+                requestQueue.add(jsonObject);
+
+
+
+
+
+
+                /*
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, server_url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         builder.setTitle("server responses");
                         builder.setMessage("Responses:" + response);
-                        /*
-                        SharedPreferences sharedPreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putString(ID,response);
-                        editor.commit();
-                        */
+
                         SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
                         SharedPreferences.Editor editor = m.edit();
-                        editor.putString("Response", response);
-                        editor.commit();
+                        //Gson gson = new Gson();
+                        //String json = gson.toJson(response);
 
+                        //editor.putString("MyObject",json);
+
+                        //String json = gson.toJson(response);
+                        //editor.putString("Response", "");
+                        editor.commit();
 
 
 
@@ -146,6 +215,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 };
+
                 // RequestQueue queue;
                 //queue = MySingleton.getmInstance(this.getApplicationContext()).getRequestQueue();
                 //RequestQueue requestQueue = Volley.newRequestQueue(this);
@@ -156,6 +226,7 @@ public class MainActivity extends AppCompatActivity {
                 //queue.add(stringRequest);
                 //MySingleton.getmInstance(getBaseContext()).addToRequestQueue(stringRequest);
                 requestQueue.add(stringRequest);
+                 */
             }
 
 

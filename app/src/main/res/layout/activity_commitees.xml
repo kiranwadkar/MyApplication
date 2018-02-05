@@ -41,7 +41,8 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/vit_acm" />
+                    android:src="@drawable/ic_acm"
+                    android:id="@+id/acm"/>
 <!--
                <TextView
                     android:layout_width="wrap_content"
@@ -82,7 +83,8 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/commitee_acm" />
+                    android:src="@drawable/ic_csi"
+                    android:id="@+id/csi"/>
 
 
 
@@ -117,7 +119,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/commitee_acm" />
+                    android:src="@drawable/ic_itsa"
+                    android:id="@+id/itsa"/>
 
 
 
@@ -149,7 +152,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/vit_cesa" />
+                    android:src="@drawable/ic_ieee_1_"
+                    android:id="@+id/ieee"/>
 
 
 
@@ -182,7 +186,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/commitee_acm" />
+                    android:src="@drawable/ic_iete"
+                    android:id="@+id/iete"/>
 
 
 
@@ -214,7 +219,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/commitee_acm" />
+                    android:src="@drawable/ic_eesa"
+                    android:id="@+id/eesa"/>
 
 
 
