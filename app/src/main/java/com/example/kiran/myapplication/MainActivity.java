@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button login;
     RequestQueue requestQueue;
-    String server_url="http://172.16.18.71:80/api/login";
+    String server_url="http://192.168.0.101:80/api/login";
     AlertDialog.Builder builder;
     String  semail;
     String spassword;

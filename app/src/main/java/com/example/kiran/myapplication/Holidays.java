@@ -25,7 +25,6 @@ public class Holidays extends AppCompatActivity {
     String data;
     RequestQueue requestQueue;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +42,7 @@ public class Holidays extends AppCompatActivity {
         });
     }
     private void jsonparse(){
-        String jsonurl="http://172.16.18.71:80/api/holidays";
+        String jsonurl="http://192.168.0.101:80/api/holidays";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, jsonurl, null, new Response.Listener<JSONObject>() {
             @Override
