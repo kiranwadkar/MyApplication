@@ -5,11 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 //import static android.os.Build.ID;
 public class Dashboard extends AppCompatActivity {
-    TextView tv1;
-    ImageView holidays,event,announcement;
+
+    ImageView holidays,event,announcement,placement;
 
 
     @Override
@@ -19,7 +18,8 @@ public class Dashboard extends AppCompatActivity {
         holidays = (ImageView) findViewById(R.id.holidays);
         event = (ImageView)findViewById(R.id.event);
         announcement = (ImageView)findViewById(R.id.annoucements);
-        tv1 = (TextView)findViewById(R.id.response);
+        placement = (ImageView)findViewById(R.id.placement);
+
 
 
         //SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
@@ -49,6 +49,14 @@ public class Dashboard extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i2 = new Intent(getBaseContext(),Announcements.class);
                 startActivity(i2);
+            }
+        });
+
+        placement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i4 = new Intent(getBaseContext(),Placement.class);
+                startActivity(i4);
             }
         });
 

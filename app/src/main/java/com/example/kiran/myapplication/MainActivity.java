@@ -50,9 +50,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-
-
                semail = email.getText().toString();
                spassword = password.getText().toString();
 
@@ -87,20 +84,24 @@ public class MainActivity extends AppCompatActivity {
 
             private void validate() {
                 server_url = server_url+"/"+semail+"/"+spassword;
-                Log.i("Server url","Full url "+server_url);
+                Log.i("Server_url","Full url "+server_url);
 
-                JsonObjectRequest jsonObject = new JsonObjectRequest(Request.Method.GET,server_url,null, new Response.Listener<JSONObject>() {
+                final JsonObjectRequest jsonObject = new JsonObjectRequest(Request.Method.GET,server_url,null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try{
 
                             JSONObject jsonObject2 = response.getJSONObject("Profile");
                             String name = jsonObject2.getString("name");
+                            Log.i("name",name);
                             String roll = jsonObject2.getString("roll");
                             String email1 = jsonObject2.getString("email");
                             String branch = jsonObject2.getString("branch");
                             String year = jsonObject2.getString("year");
                             String division = jsonObject2.getString("division");
+
+                            int i = jsonObject2.getInt("status");
+                            String status =String.valueOf(i);
 
                             SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
                             SharedPreferences.Editor editor = m.edit();
@@ -122,12 +123,13 @@ public class MainActivity extends AppCompatActivity {
                             });*/
                             AlertDialog alertDialog = builder.create();
                             alertDialog.show();
-                            String s = response.getString("MESSAGE");
-                            Log.i("msg",s);
-                            if(s.contains("success")){
+                            //String s = response.getString("MESSAGE");
+                            //Log.i("msg",s);
+                            if(status.contains("1")){
                                 //contains("success")
                                 email.setText("");
                                 password.setText("");
+                                Toast.makeText(getBaseContext(),"Login Successfully",Toast.LENGTH_SHORT).show();
                                 Intent i11 = new Intent(getBaseContext(),Dashboard.class);
                                 startActivity(i11);
 

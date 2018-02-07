@@ -9,12 +9,6 @@
     tools:context="com.example.kiran.myapplication.Dashboard" >
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/response"
-        />
-
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -213,6 +207,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/placement"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"

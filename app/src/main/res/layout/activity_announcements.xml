@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.example.kiran.myapplication.Announcements">
 
-   <TextView
+  <TextView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:id="@+id/tv1"/>
@@ -17,5 +17,7 @@
        android:layout_height="wrap_content"
        android:id="@+id/btn"
        android:text="parse"/>
+
+
 
 </LinearLayout>
