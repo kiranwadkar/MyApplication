@@ -24,7 +24,7 @@ public class Placement extends AppCompatActivity {
     TextView tv1;
     Button parse;
     RequestQueue requestQueue;
-    String server_url="http://192.168.0.101:80/api/placements";
+    String server_url="http://192.168.0.102:80/api/placements";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,23 +49,19 @@ public class Placement extends AppCompatActivity {
                 JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, server_url, null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-
-
                         try {
                             JSONArray jsonArray = response.getJSONArray("placement");
+                            for(int i=0;i<jsonArray.length();i++){
+                                JSONObject place = jsonArray.getJSONObject(i);
+                                String head = place.getString("head");
+                                String body = place.getString("body");
+                                tv1.append(head+"\n"+body+"\n\n");
 
-                                for(int i =0;i<jsonArray.length();i++){
-                                    JSONObject jobj1 = jsonArray.getJSONObject(i);
-                                    String head = jobj1.getString("head");
-                                    Log.i("head",head);
-                                    String body = jobj1.getString("body");
-                                    String created_at = jobj1.getString("created_at");
-                                    tv1.append(head+body+created_at+"\n\n");
-
-                                }
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
+
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -73,6 +69,7 @@ public class Placement extends AppCompatActivity {
                         error.printStackTrace();
                     }
                 });
+                requestQueue.add(request);
             }
 
         });

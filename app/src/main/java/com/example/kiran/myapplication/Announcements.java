@@ -24,7 +24,7 @@ public class Announcements extends AppCompatActivity {
     Button parse;
 
     RequestQueue requestQueue;
-    String server_url="http://192.168.0.101:80/api/announcements";
+    String server_url="http://192.168.0.102:80/api/announcements";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

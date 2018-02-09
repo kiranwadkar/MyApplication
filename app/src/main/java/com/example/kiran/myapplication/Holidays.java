@@ -42,7 +42,7 @@ public class Holidays extends AppCompatActivity {
         });
     }
     private void jsonparse(){
-        String jsonurl="http://192.168.0.101:80/api/holidays";
+        String jsonurl="http://192.168.0.102:80/api/holidays";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, jsonurl, null, new Response.Listener<JSONObject>() {
             @Override

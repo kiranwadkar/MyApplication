@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -30,25 +29,35 @@ public class MainActivity extends AppCompatActivity {
 
     Button login;
     RequestQueue requestQueue;
-    String server_url="http://192.168.0.101:80/api/login";
-    AlertDialog.Builder builder;
+    String server_url="http://192.168.0.102:80/api/login";
     String  semail;
     String spassword;
+
    // public static final String MyPREFERENCES = "MyPrefs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         final EditText email = (EditText)findViewById(R.id.username);
         final EditText password = (EditText)findViewById(R.id.password);
+
+
+
+
         Button login = (Button)findViewById(R.id.login);
-        builder = new AlertDialog.Builder(MainActivity.this);
+
         requestQueue = Volley.newRequestQueue(this);
+
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+
 
                semail = email.getText().toString();
                spassword = password.getText().toString();
@@ -69,16 +78,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-/*
-                if((susername).equals("admin")&&(spassword).equals("admin123")){
-                    Toast.makeText(getBaseContext(),"Login Successful",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getBaseContext(),Dashboard.class);
-                    startActivity(intent);
-                }
-                else {
-                    Toast.makeText(getBaseContext(),"Please enter correct creaditials",Toast.LENGTH_SHORT).show();
-                }
-*/
 
             }
 
@@ -92,6 +91,23 @@ public class MainActivity extends AppCompatActivity {
                         try{
 
                             JSONObject jsonObject2 = response.getJSONObject("Profile");
+                            int i = jsonObject2.getInt("status");
+                            String status =String.valueOf(i);
+                            if(status.contains("0")){
+
+                                Log.i("msg","work");
+                                Toast.makeText(getBaseContext(),"Invalid username and password",Toast.LENGTH_SHORT).show();
+
+
+                            }
+                            else{
+                                email.setText("");
+                                password.setText("");
+                                Toast.makeText(getBaseContext(),"Login Sucessfully",Toast.LENGTH_SHORT).show();
+                                Intent i1= new Intent(getBaseContext(),Dashboard.class);
+                                startActivity(i1);
+                            }
+
                             String name = jsonObject2.getString("name");
                             Log.i("name",name);
                             String roll = jsonObject2.getString("roll");
@@ -100,8 +116,7 @@ public class MainActivity extends AppCompatActivity {
                             String year = jsonObject2.getString("year");
                             String division = jsonObject2.getString("division");
 
-                            int i = jsonObject2.getInt("status");
-                            String status =String.valueOf(i);
+
 
                             SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
                             SharedPreferences.Editor editor = m.edit();
@@ -113,32 +128,8 @@ public class MainActivity extends AppCompatActivity {
                             editor.putString("Division",division);
                             editor.commit();
 
-                           // Log.i("Name",name);
-                           /* builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    email.setText("");
-                                    password.setText("");
-                                }
-                            });*/
-                            AlertDialog alertDialog = builder.create();
-                            alertDialog.show();
-                            //String s = response.getString("MESSAGE");
-                            //Log.i("msg",s);
-                            if(status.contains("1")){
-                                //contains("success")
-                                email.setText("");
-                                password.setText("");
-                                Toast.makeText(getBaseContext(),"Login Successfully",Toast.LENGTH_SHORT).show();
-                                Intent i11 = new Intent(getBaseContext(),Dashboard.class);
-                                startActivity(i11);
 
 
-                            }
-                            else{
-                                Log.i("Invalid","Testing");
-                                Toast.makeText(getBaseContext(),"Invalid Input",Toast.LENGTH_SHORT).show();;
-                            }
 
                         }
                         catch (JSONException e) {
@@ -159,77 +150,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                /*
-                StringRequest stringRequest = new StringRequest(Request.Method.GET, server_url, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        builder.setTitle("server responses");
-                        builder.setMessage("Responses:" + response);
-
-                        SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-                        SharedPreferences.Editor editor = m.edit();
-                        //Gson gson = new Gson();
-                        //String json = gson.toJson(response);
-
-                        //editor.putString("MyObject",json);
-
-                        //String json = gson.toJson(response);
-                        //editor.putString("Response", "");
-                        editor.commit();
-
-
-
-                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                email.setText("");
-                                password.setText("");
-                            }
-                        });
-
-                        AlertDialog alertDialog = builder.create();
-                        alertDialog.show();
-                        if(response.contains("success")){
-                            Intent i11 = new Intent(getBaseContext(),Dashboard.class);
-                            startActivity(i11);
-
-
-                        }
-                        else{
-                            // response.setShouldCache(false);
-                            Toast.makeText(MainActivity.this, "Invalid", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getBaseContext(),"Error",Toast.LENGTH_SHORT).show();
-                        error.printStackTrace();
-                    }
-                }){
-                    @Override
-                    protected Map<String, String> getParams() throws AuthFailureError {
-                        Map<String,String> params = new HashMap<String, String>();
-
-                        params.put("email",semail);
-                        params.put("password",spassword);
-                        return params;
-                    }
-
-                };
-
-                // RequestQueue queue;
-                //queue = MySingleton.getmInstance(this.getApplicationContext()).getRequestQueue();
-                //RequestQueue requestQueue = Volley.newRequestQueue(this);
-                // requestQueue.add(stringRequest);
-                //queue.getCache().clear();
-                //stringRequest.setShouldCache(false);
-                //requestQueue.getCache().clear();
-                //queue.add(stringRequest);
-                //MySingleton.getmInstance(getBaseContext()).addToRequestQueue(stringRequest);
-                requestQueue.add(stringRequest);
-                 */
-            }
+                           }
 
 
             private boolean isValidPassword(String pass) {
@@ -246,11 +167,18 @@ public class MainActivity extends AppCompatActivity {
                 Pattern pattern = Pattern.compile(EMAIL_PATTERN);
                 Matcher matcher = pattern.matcher(semail);
                 return matcher.matches();
-            }
+          }
 
         });
 
     }
+
+
+
+
+
+
+
 
 }
 
