@@ -4,9 +4,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -19,27 +19,48 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Announcements extends AppCompatActivity {
-   TextView tv1;
+   /*
+    TextView tv1;
     Button parse;
 
     RequestQueue requestQueue;
     String server_url="http://192.168.0.102:80/api/announcements";
+    */
+   String server_url="http://192.168.0.102:80/api/announcements";
+   private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    List<List_items_announcement> listItems;
+    RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_announcements);
-        tv1 = (TextView)findViewById(R.id.tv1);
-        parse = (Button) findViewById(R.id.btn);
 
+        recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         requestQueue = Volley.newRequestQueue(this);
+
+        listItems = new ArrayList<>();
+
+
 
         SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
         //String name = m.getString("Name","");
         final String year = m.getString("Year","");
         final String branch =m.getString("Branch","");
         final String div = m.getString("Division","");
+        server_url = server_url+"/"+year+"/"+branch+"/"+div;
+        loadRecyclerView();
+/*
+        tv1 = (TextView)findViewById(R.id.tv1);
+        parse = (Button) findViewById(R.id.btn);
 
+        requestQueue = Volley.newRequestQueue(this);
 
 
         parse.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +76,7 @@ public class Announcements extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                           JSONArray jsonArray = response.getJSONArray("announcement");
+                            JSONArray jsonArray = response.getJSONArray("announcement");
                             //JSONObject jsonObject = response.getJSONObject("announcement");
                             for(int i =0;i<jsonArray.length();i++){
                                 JSONObject a1 = jsonArray.getJSONObject(i);
@@ -76,13 +97,51 @@ public class Announcements extends AppCompatActivity {
                 });
                 requestQueue.add(request);
             }
+
+            final String div = m.getString("Division","");
+
         });
 
 
 
+*/
 
 
+    }
 
+    private void loadRecyclerView() {
+
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, server_url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray jsonArray = response.getJSONArray("announcement");
+                    //JSONObject jsonObject = response.getJSONObject("announcement");
+                    for(int i =0;i<jsonArray.length();i++){
+                        JSONObject a1 = jsonArray.getJSONObject(i);
+                        String head = a1.getString("head");
+                        String body = a1.getString("body");
+                        Log.i("Head",head);
+                        Log.i("Body",body);
+                        List_items_announcement item =new  List_items_announcement(head,body);
+                        listItems.add(item);
+                        //tv1.append(head+"\n" +body+"\n");
+
+                    }
+                    adapter = new RecyclerViewAdapterAnnouncement(listItems,getBaseContext());
+                    recyclerView.setAdapter(adapter);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        });
+        requestQueue.add(request);
     }
 
 }
