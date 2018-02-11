@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.example.kiran.myapplication.Placement">
 
-
+<!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,5 +18,17 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn"
         android:text="parse"/>
+-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerview"
+            />
+
+    </ScrollView>
 
 </LinearLayout>
