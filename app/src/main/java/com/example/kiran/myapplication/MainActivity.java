@@ -115,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
                             String branch = jsonObject2.getString("branch");
                             String year = jsonObject2.getString("year");
                             String division = jsonObject2.getString("division");
+                            int id = jsonObject2.getInt("id");
+                            String id1 = String.valueOf(id);
 
 
 
@@ -126,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
                             editor.putString("Branch",branch);
                             editor.putString("Year",year);
                             editor.putString("Division",division);
+                            editor.putString("Id",id1);
                             editor.commit();
 
 

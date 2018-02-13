@@ -24,7 +24,9 @@
         <activity android:name=".Holidays" />
         <activity android:name=".Announcements" />
         <activity android:name=".Commitee_acm" />
-        <activity android:name=".Placement"></activity>
+        <activity android:name=".Placement" />
+        <activity android:name=".Placement_display_desc" />
+        <activity android:name=".Commitee_acm_registerevent"></activity>
     </application>
 
 </manifest>
