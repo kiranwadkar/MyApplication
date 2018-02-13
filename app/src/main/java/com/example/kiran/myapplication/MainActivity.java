@@ -93,19 +93,22 @@ public class MainActivity extends AppCompatActivity {
                             JSONObject jsonObject2 = response.getJSONObject("Profile");
                             int i = jsonObject2.getInt("status");
                             String status =String.valueOf(i);
-                            if(status.contains("0")){
+                            if(status.equals("1")){
 
-                                Log.i("msg","work");
-                                Toast.makeText(getBaseContext(),"Invalid username and password",Toast.LENGTH_SHORT).show();
-
-
-                            }
-                            else{
                                 email.setText("");
                                 password.setText("");
                                 Toast.makeText(getBaseContext(),"Login Sucessfully",Toast.LENGTH_SHORT).show();
                                 Intent i1= new Intent(getBaseContext(),Dashboard.class);
                                 startActivity(i1);
+
+
+
+
+
+                            }
+                            else{
+                               // Log.i("msg","work");
+                                Toast.makeText(getBaseContext(),"Invalid username and password",Toast.LENGTH_SHORT).show();
                             }
 
                             String name = jsonObject2.getString("name");
