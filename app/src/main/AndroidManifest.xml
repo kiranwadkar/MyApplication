@@ -26,7 +26,8 @@
         <activity android:name=".Commitee_acm" />
         <activity android:name=".Placement" />
         <activity android:name=".Placement_display_desc" />
-        <activity android:name=".Commitee_acm_registerevent"></activity>
+        <activity android:name=".Commitee_acm_registerevent" />
+        <activity android:name=".IA_timetable"></activity>
     </application>
 
 </manifest>

@@ -36,20 +36,26 @@ public class RecyclerViewAdapterPlacement extends RecyclerView.Adapter<RecyclerV
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final List_items_placement listItem = listItems.get(position);
-        holder.textViewname.setText(List_items_placement.getHead());
-        holder.textViewdate.setText(List_items_placement.getBody());
+        holder.textViewname.setText(listItem.getHead());
+        holder.textViewdate.setText(listItem.getBody());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent (context,Placement_display_desc.class);
-                String head = List_items_placement.getHead().toString();
-                String body = List_items_placement.getBody().toString();
+                String head = listItem.getHead().toString();
+                String body = listItem.getBody().toString();
                 Bundle bb = new Bundle();
                 bb.putString("1",head);
                 bb.putString("2",body);
                 i.putExtras(bb);
                 context.startActivity(i);
+
+
+
+
+
+
 
             }
         });

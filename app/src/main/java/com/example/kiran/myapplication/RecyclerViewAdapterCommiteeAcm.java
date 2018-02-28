@@ -34,17 +34,17 @@ public class RecyclerViewAdapterCommiteeAcm extends RecyclerView.Adapter<Recycle
 
     @Override
     public void onBindViewHolder(RecyclerViewAdapterCommiteeAcm.ViewHolder holder, int position) {
-        List_items_commitee_acm listItem = listItems.get(position);
-        holder.textViewname.setText(List_items_commitee_acm.getHead());
-        holder.textViewdate.setText(List_items_commitee_acm.getBody());
+        final List_items_commitee_acm listItem = listItems.get(position);
+        holder.textViewname.setText(listItem.getHead());
+        holder.textViewdate.setText(listItem.getBody());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 Intent i = new Intent (context,Commitee_acm_registerevent.class);
-                String head = List_items_commitee_acm.getHead().toString();
-                String body = List_items_commitee_acm.getBody().toString();
+                String head = listItem.getHead().toString();
+                String body = listItem.getBody().toString();
                 Bundle bb = new Bundle();
                 bb.putString("1",head);
                 bb.putString("2",body);

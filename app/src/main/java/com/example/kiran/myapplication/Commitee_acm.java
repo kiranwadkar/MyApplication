@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Commitee_acm extends AppCompatActivity {
-    String server_url="http://192.168.0.102:80/api/events";
+    String server_url="http://192.168.0.103:80/api/events";
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     List<List_items_commitee_acm> listItems;
@@ -41,7 +41,7 @@ public class Commitee_acm extends AppCompatActivity {
         SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
         final String year = m.getString("Year","");
         final String branch =m.getString("Branch","");
-        server_url = server_url+"/"+year+"/"+branch+"/"+"acm";
+        server_url = server_url+"/"+year+"/"+branch+"/"+"ACM";
         Log.i("kiran_testing",server_url);
         loadRecyclerView();
     }
@@ -52,21 +52,28 @@ public class Commitee_acm extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    JSONArray jsonArray = response.getJSONArray("event");
+                    JSONArray jsonArray = response.getJSONArray("events");
                     for(int i=0;i<jsonArray.length();i++){
                         JSONObject o1 = jsonArray.getJSONObject(i);
                         String head = o1.getString("name");
                         String body = o1.getString("details");
-                        String price = o1.getString("price");
+                        Log.i("Head22",head);
+                        int p = o1.getInt("price");
+                        String price = String.valueOf(p);
+                        Log.i("price",price);
+
                         int id = o1.getInt("id");
                         String id1 = String.valueOf(id);
                         Log.i("id",id1);
                         String contact_name = o1.getString("contact_name");
-                        Log.i("Head",head);
-                        Log.i("Body",body);
+
+                        Log.i("Head22",head);
+                        Log.i("Body22",body);
 
                         SharedPreferences sharedPreferences = getSharedPreferences("Myevent", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
+                        //editor.putString("Head",head);
+                        //editor.putString("Body",body);
                         editor.putString("Price", price);
                         editor.putString("Contact", contact_name);
                         editor.putString("Id",id1);

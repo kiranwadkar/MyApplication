@@ -30,7 +30,7 @@ public class Announcements extends AppCompatActivity {
     RequestQueue requestQueue;
     String server_url="http://192.168.0.102:80/api/announcements";
     */
-   String server_url="http://192.168.0.102:80/api/announcements";
+   String server_url="http://192.168.0.103:80/api/announcements";
    private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     List<List_items_announcement> listItems;
@@ -121,6 +121,7 @@ public class Announcements extends AppCompatActivity {
                     for(int i =0;i<jsonArray.length();i++){
                         JSONObject a1 = jsonArray.getJSONObject(i);
                         String head = a1.getString("head");
+                       // JSONObject a2 = jsonArray.getJSONObject(i);
                         String body = a1.getString("body");
                         Log.i("Head",head);
                         Log.i("Body",body);

@@ -7,19 +7,19 @@ package com.example.kiran.myapplication;
 public class List_items_announcement {
 
    // private static String head1;
-    private static String head;
-    private static String body;
+    private  String head;
+    private  String body;
 
     public List_items_announcement(String head, String body) {
         this.head = head;
         this.body = body;
     }
 
-    public static String getHead() {
+    public  String getHead() {
         return head;
     }
 
-    public static String getBody() {
+    public  String getBody() {
         return body;
     }
 }

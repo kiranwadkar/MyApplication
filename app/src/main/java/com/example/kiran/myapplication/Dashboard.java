@@ -8,7 +8,7 @@ import android.widget.ImageView;
 //import static android.os.Build.ID;
 public class Dashboard extends AppCompatActivity {
 
-    ImageView holidays,event,announcement,placement;
+    ImageView holidays,event,announcement,placement,ia;
 
 
     @Override
@@ -19,6 +19,7 @@ public class Dashboard extends AppCompatActivity {
         event = (ImageView)findViewById(R.id.event);
         announcement = (ImageView)findViewById(R.id.annoucements);
         placement = (ImageView)findViewById(R.id.placement);
+        ia = (ImageView)findViewById(R.id.ia);
 
 
 
@@ -27,7 +28,13 @@ public class Dashboard extends AppCompatActivity {
         //tv1.setText(mResponse);
         //Log.i("test",mResponse);
 
-
+        ia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i5 = new Intent(getBaseContext(),IA_timetable.class);
+                startActivity(i5);
+            }
+        });
         event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

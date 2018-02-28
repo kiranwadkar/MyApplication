@@ -31,9 +31,14 @@ public class RecyclerViewAdapterAnnouncement extends RecyclerView.Adapter<Recycl
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+       // List_items_announcement listItem = listItems.get(position);
+       // holder.textViewname.setText(List_items_announcement.getHead());
+       // holder.textViewdate.setText(List_items_announcement.getBody());
+
+
         List_items_announcement listItem = listItems.get(position);
-        holder.textViewname.setText(List_items_announcement.getHead());
-        holder.textViewdate.setText(List_items_announcement.getBody());
+        holder.textViewname.setText(listItem.getHead());
+        holder.textViewdate.setText(listItem.getBody());
 
     }
 

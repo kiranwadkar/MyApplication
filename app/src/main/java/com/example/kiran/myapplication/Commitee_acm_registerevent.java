@@ -24,7 +24,7 @@ import org.json.JSONObject;
 public class Commitee_acm_registerevent extends AppCompatActivity {
     TextView tv1,tv2,tv3,tv4;
     Button register;
-    String server_url="http://192.168.0.102:80/api/events_registration";
+    String server_url="http://192.168.0.103:80/api/events_registration";
     RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

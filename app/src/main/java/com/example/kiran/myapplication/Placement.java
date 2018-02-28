@@ -33,7 +33,7 @@ public class Placement extends AppCompatActivity {
     List<List_items_placement> listItems;
     RequestQueue requestQueue;
 
-    String server_url="http://192.168.0.102:80/api/placements";
+    String server_url="http://192.168.0.103:80/api/placements";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

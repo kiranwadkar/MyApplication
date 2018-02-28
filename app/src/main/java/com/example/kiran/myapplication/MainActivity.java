@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button login;
     RequestQueue requestQueue;
-    String server_url="http://192.168.0.102:80/api/login";
+    String server_url="http://192.168.0.103:80/api/login";
     String  semail;
     String spassword;
 
@@ -118,6 +118,9 @@ public class MainActivity extends AppCompatActivity {
                             String branch = jsonObject2.getString("branch");
                             String year = jsonObject2.getString("year");
                             String division = jsonObject2.getString("division");
+                            int sem = jsonObject2.getInt("sem");
+                            String sem1 = String.valueOf(sem);
+
                             int id = jsonObject2.getInt("id");
                             String id1 = String.valueOf(id);
 
@@ -132,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
                             editor.putString("Year",year);
                             editor.putString("Division",division);
                             editor.putString("Id",id1);
+                            editor.putString("Sem",sem1);
                             editor.commit();
 
 
