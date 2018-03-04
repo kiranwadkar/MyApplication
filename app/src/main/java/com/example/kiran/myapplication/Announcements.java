@@ -30,7 +30,7 @@ public class Announcements extends AppCompatActivity {
     RequestQueue requestQueue;
     String server_url="http://192.168.0.102:80/api/announcements";
     */
-   String server_url="http://192.168.0.103:80/api/announcements";
+   String server_url="http://192.168.0.102:80/api/announcements";
    private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     List<List_items_announcement> listItems;

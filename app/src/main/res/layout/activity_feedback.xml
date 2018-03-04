@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.kiran.myapplication.Feedback">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="A>Self-Assessment of Learning Process:"
+                android:textSize="15dp"
+                android:textStyle="bold|italic" />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#8E24AA">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1]How do you learn subject?"
+                    />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp">
+                    <TableRow>
+                        <CheckBox
+                            android:id="@+id/checkbox1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="a)I Myself prepare the notes"
+                            android:textSize="10dp"/>
+
+                        <CheckBox
+                            android:id="@+id/checkbox2"
+                            android:layout_marginTop="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10dp"
+                            android:text="a)I Myself prepare the notes"/>
+                    </TableRow>
+                </TableLayout>
+
+            </android.support.v7.widget.CardView>
+<!--
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="B>Assessment of the Faculties teaching in your class"
+                android:textSize="15dp"
+                android:textStyle="bold|italic" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:cardBackgroundColor="#8E24AA">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp">
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvsub1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Subject : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edsub1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Subject 1  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvlect1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lecure : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edlect1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Lecurer name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvtuto1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tutorial/Lab: "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edtuto1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Tutorial name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <RatingBar
+                            android:id="@+id/rating1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:rating="0.0"
+                            android:stepSize="1.0" />
+                    </TableLayout>
+
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp">
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvsub2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Subject : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edsub2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Subject 1  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvlect2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lecure : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edlect2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Lecurer name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvtuto2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tutorial/Lab: "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edtuto2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Tutorial name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <RatingBar
+                            android:id="@+id/rating2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:rating="0.0"
+                            android:stepSize="1.0" />
+                    </TableLayout>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tvsub3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Subject : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edsub3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Subject 1  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvlect3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lecure : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edlect3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Lecurer name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvtuto3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tutorial/Lab: "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edtuto3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Tutorial name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <RatingBar
+                            android:id="@+id/rating3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:rating="0.0"
+                            android:stepSize="1.0" />
+                    </TableLayout>
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tvsub4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Subject : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edsub4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Subject 1  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvlect4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lecure : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edlect4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Lecurer name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tvtuto4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tutorial/Lab: "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edtuto4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Tutorial name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <RatingBar
+                            android:id="@+id/rating4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:rating="0.0"
+                            android:stepSize="1.0" />
+                    </TableLayout>
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp">
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvsub5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Subject : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edsub5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Subject 1  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvlect5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lecure : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edlect5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Lecurer name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvtuto5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tutorial/Lab: "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edtuto5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Tutorial name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <RatingBar
+                            android:id="@+id/rating5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:rating="0.0"
+                            android:stepSize="1.0" />
+                    </TableLayout>
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp">
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvsub6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Subject : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edsub6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Subject 1  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvlect6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lecure : "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edlect6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Lecurer name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <TableRow >
+
+                            <TextView
+                                android:id="@+id/tvtuto6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tutorial/Lab: "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+
+                            <EditText
+                                android:id="@+id/edtuto6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter Tutorial name  "
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textSize="15dp" />
+                        </TableRow>
+
+                        <RatingBar
+                            android:id="@+id/rating6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:rating="0.0"
+                            android:stepSize="1.0" />
+                    </TableLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="C>Assessment of the Study Materials:"
+                android:textSize="15dp"
+                android:textStyle="bold|italic" />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#E4D96F">
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="5dp">
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quality assessment tool for\n the study material provided "
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="study materials\n provided by \ncourse teacher\n(Grade 4-0)"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Printed study\n materials distributed \n(Grade 4-0)"/>
+                    </TableRow>
+                    <TableRow
+                        android:background="@color/colorAccent"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1)Do They cover complete Syllabus"/>
+                        <EditText
+                            android:id="@+id/cet1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <EditText
+                            android:id="@+id/cet2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        android:background="@color/secondaryLightColor">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2)Do They have sytematic approach"/>
+                        <EditText
+                            android:id="@+id/cet3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <EditText
+                            android:id="@+id/cet4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </TableRow>
+                    <TableRow
+                        android:background="@color/primaryLightColor"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3)Are they simple to comprehand"/>
+                        <EditText
+                            android:id="@+id/cet5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <EditText
+                            android:id="@+id/cet6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </TableRow>
+                    <TableRow
+                        android:background="@color/colorAccent"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4)Relavance of notes to \nclassroom teaching"/>
+                        <EditText
+                            android:id="@+id/cet7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <EditText
+                            android:id="@+id/cet8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </TableRow>
+                    <EditText
+                        android:id="@+id/cet9"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/secondaryLightColor"
+                        android:hint="Detailed suggestion if any"
+                        android:textSize="15dp"
+                        android:layout_marginTop="10dp"/>
+                </TableLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="D>Assessment of Amenities:"
+                android:textSize="15dp"
+                android:textStyle="bold|italic" />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#d19fe8">
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp"
+                    >
+                    <TableRow
+                        android:layout_marginTop="10dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Amenities"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Grade  "/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="other Remark /suggestion"/>
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:text="1]Co-operation of \nnon-teaching staff from \n administrative office"/>
+                        <EditText
+                            android:id="@+id/det1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4-0"
+                            />
+                        <EditText
+                            android:id="@+id/det2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="comment"
+                            />
+
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:text="2]Co-operation of \nnon-teaching staff from \n Examination cell"/>
+                        <EditText
+                            android:id="@+id/det3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4-0"
+                            />
+                        <EditText
+                            android:id="@+id/det4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="comment"
+                            />
+
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:text="3]Co-operation of \nnon-teaching staff from \n Institute Library"/>
+                        <EditText
+                            android:id="@+id/det5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4-0"
+                            />
+                        <EditText
+                            android:id="@+id/det6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="comment"
+                            />
+
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:text="3]Co-operation of \nnon-teaching staff from \n Department Laboratory"/>
+                        <EditText
+                            android:id="@+id/det7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4-0"
+                            />
+                        <EditText
+                            android:id="@+id/det8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="comment"
+                            />
+
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4]cleanliness of classroom"/>
+                        <EditText
+                            android:id="@+id/det9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4-0"
+                            />
+                        <EditText
+                            android:id="@+id/det10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="comment"
+                            />
+
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5]Drinking water facility"/>
+                        <EditText
+                            android:id="@+id/det11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4-0"
+                            />
+                        <EditText
+                            android:id="@+id/det12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="comment"
+                            />
+
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6]Upkeep of rest room"/>
+                        <EditText
+                            android:id="@+id/det13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4-0"
+                            />
+                        <EditText
+                            android:id="@+id/det14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="comment"
+                            />
+
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7]Canteen Facility"/>
+                        <EditText
+                            android:id="@+id/det15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4-0"
+                            />
+                        <EditText
+                            android:id="@+id/det16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="comment"
+                            />
+
+                    </TableRow>
+
+                </TableLayout>
+            </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_gravity="center_horizontal"
+                />
+-->
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

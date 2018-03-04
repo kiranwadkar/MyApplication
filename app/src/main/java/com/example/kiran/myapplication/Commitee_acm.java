@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Commitee_acm extends AppCompatActivity {
-    String server_url="http://192.168.0.103:80/api/events";
+    String server_url="http://192.168.0.102:80/api/events";
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     List<List_items_commitee_acm> listItems;

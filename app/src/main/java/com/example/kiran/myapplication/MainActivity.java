@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
 
     Button login;
     RequestQueue requestQueue;
-    String server_url="http://192.168.0.103:80/api/login";
+    String server_url="http://192.168.0.102:80/api/login";
     String  semail;
     String spassword;
 
-   // public static final String MyPREFERENCES = "MyPrefs";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +43,11 @@ public class MainActivity extends AppCompatActivity {
         final EditText email = (EditText)findViewById(R.id.username);
         final EditText password = (EditText)findViewById(R.id.password);
 
-
-
-
-        Button login = (Button)findViewById(R.id.login);
-
+        final Button login = (Button)findViewById(R.id.login);
         requestQueue = Volley.newRequestQueue(this);
+
+
+
 
 
 
@@ -64,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if(isValidEmail(semail)){
                     if(isValidPassword(spassword)){
+                       // semail = email.getText().toString();
+                        //spassword = password.getText().toString();
                         validate();//change kelay
                         // Toast.makeText(getBaseContext(),"valid",Toast.LENGTH_SHORT).show();
 
@@ -82,61 +83,65 @@ public class MainActivity extends AppCompatActivity {
             }
 
             private void validate() {
-                server_url = server_url+"/"+semail+"/"+spassword;
-                Log.i("Server_url","Full url "+server_url);
+             String   final_server_url =server_url+ "/"+semail+"/"+spassword;
+                //server_url = server_url+"/"+"login"+"/"+semail+"/"+spassword;
+                Log.i("Server_url","Full url "+final_server_url);
 
-                final JsonObjectRequest jsonObject = new JsonObjectRequest(Request.Method.GET,server_url,null, new Response.Listener<JSONObject>() {
+                final JsonObjectRequest jsonObject = new JsonObjectRequest(Request.Method.GET,final_server_url,null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try{
+                            //JSONObject j1 = response.getJSONObject("MESSAGE");
+                            String msg = response.getString("MESSAGE");
+                            JSONObject jsonObject2 =null;
+                            if(response.has("Profile")){
+                                 jsonObject2 = response.getJSONObject("Profile");
+                            }
 
-                            JSONObject jsonObject2 = response.getJSONObject("Profile");
-                            int i = jsonObject2.getInt("status");
-                            String status =String.valueOf(i);
-                            if(status.equals("1")){
-
+                            //int i = js2.getInt("status");
+                            //String status =String.valueOf(i);
+                            //String msg = j1.getString("");
+                            if(msg.contains("Login Successful.")&&   jsonObject2 !=null ){
+                                Log.i("login","success");
                                 email.setText("");
                                 password.setText("");
                                 Toast.makeText(getBaseContext(),"Login Sucessfully",Toast.LENGTH_SHORT).show();
+
+                                String name = jsonObject2.getString("name");
+                                Log.i("name",name);
+                                String roll = jsonObject2.getString("roll");
+                                String email1 = jsonObject2.getString("email");
+                                String branch = jsonObject2.getString("branch");
+                                String year = jsonObject2.getString("year");
+                                String division = jsonObject2.getString("division");
+                                int sem = jsonObject2.getInt("sem");
+                                String sem1 = String.valueOf(sem);
+
+                                int id = jsonObject2.getInt("id");
+                                String id1 = String.valueOf(id);
+
+
+                                SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                                SharedPreferences.Editor editor = m.edit();
+                                editor.putString("Name",name);
+                                editor.putString("Roll",roll);
+                                editor.putString("Email",email1);
+                                editor.putString("Branch",branch);
+                                editor.putString("Year",year);
+                                editor.putString("Division",division);
+                                editor.putString("Id",id1);
+                                editor.putString("Sem",sem1);
+                                editor.commit();
+
                                 Intent i1= new Intent(getBaseContext(),Dashboard.class);
                                 startActivity(i1);
 
-
-
-
-
                             }
                             else{
-                               // Log.i("msg","work");
+                                Log.i("msg","work");
                                 Toast.makeText(getBaseContext(),"Invalid username and password",Toast.LENGTH_SHORT).show();
                             }
 
-                            String name = jsonObject2.getString("name");
-                            Log.i("name",name);
-                            String roll = jsonObject2.getString("roll");
-                            String email1 = jsonObject2.getString("email");
-                            String branch = jsonObject2.getString("branch");
-                            String year = jsonObject2.getString("year");
-                            String division = jsonObject2.getString("division");
-                            int sem = jsonObject2.getInt("sem");
-                            String sem1 = String.valueOf(sem);
-
-                            int id = jsonObject2.getInt("id");
-                            String id1 = String.valueOf(id);
-
-
-
-                            SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-                            SharedPreferences.Editor editor = m.edit();
-                            editor.putString("Name",name);
-                            editor.putString("Roll",roll);
-                            editor.putString("Email",email1);
-                            editor.putString("Branch",branch);
-                            editor.putString("Year",year);
-                            editor.putString("Division",division);
-                            editor.putString("Id",id1);
-                            editor.putString("Sem",sem1);
-                            editor.commit();
 
 
 
@@ -154,12 +159,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 requestQueue.add(jsonObject);
-
-
-
-
-
-
                            }
 
 

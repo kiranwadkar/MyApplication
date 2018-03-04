@@ -33,6 +33,7 @@
             <EditText android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="prathu48@gmail.com"
                 android:inputType="text"
                 android:hint="Username" />
         </android.support.design.widget.TextInputLayout>
@@ -48,6 +49,7 @@
             android:id="@+id/textinput_password">
             <EditText android:id="@+id/password"
                 android:layout_width="match_parent"
+                android:text="prathamesh"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:hint="Password"/>
