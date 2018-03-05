@@ -1,5 +1,6 @@
 package com.example.kiran.myapplication;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -32,8 +33,8 @@ public class Placement extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     List<List_items_placement> listItems;
     RequestQueue requestQueue;
-
-    String server_url="http://192.168.0.102:80/api/placements";
+    String placementurl;
+    //String server_url="http://192.168.43.57:80/api/placements";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,54 +48,20 @@ public class Placement extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         requestQueue = Volley.newRequestQueue(this);
         listItems = new ArrayList<>();
+        SharedPreferences s = getSharedPreferences("Myserver", Context.MODE_PRIVATE);
+        String url = s.getString("Server","");
+
         SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
         final String year = m.getString("Year","");
         final String branch =m.getString("Branch","");
-        server_url = server_url+"/"+year+"/"+branch;
-        Log.i("kiran_testing",server_url);
+        placementurl = url+"/"+"placements"+"/"+year+"/"+branch;
+        Log.i("placementurl",placementurl);
         loadRecyclerView();
-/*
-        parse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                jsonparse();
-            }
 
-            private void jsonparse() {
-                server_url = server_url+"/"+year+"/"+branch;
-                Log.i("placement_url",server_url);
-                JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, server_url, null, new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            JSONArray jsonArray = response.getJSONArray("placement");
-                            for(int i=0;i<jsonArray.length();i++){
-                                JSONObject place = jsonArray.getJSONObject(i);
-                                String head = place.getString("head");
-                                String body = place.getString("body");
-                                tv1.append(head+"\n"+body+"\n\n");
-
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        error.printStackTrace();
-                    }
-                });
-                requestQueue.add(request);
-            }
-
-        });
-*/
     }
 
     private void loadRecyclerView() {
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, server_url, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, placementurl, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {

@@ -24,8 +24,10 @@ import org.json.JSONObject;
 public class Commitee_acm_registerevent extends AppCompatActivity {
     TextView tv1,tv2,tv3,tv4;
     Button register;
-    String server_url="http://192.168.0.102:80/api/events_registration";
+    //String server_url="http://192.168.43.57:80/api/events_registration";
+    String reg_server_url;
     RequestQueue requestQueue;
+    String url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,15 +43,18 @@ public class Commitee_acm_registerevent extends AppCompatActivity {
         String s1= bb.getString("1");
         String s2 = bb.getString("2");
 
+        SharedPreferences s = getSharedPreferences("Myserver", Context.MODE_PRIVATE);
+        url = s.getString("Server","");
+
         SharedPreferences sharedPreferences = getSharedPreferences("Myevent", Context.MODE_PRIVATE);
         final String price = sharedPreferences.getString("Price","");
         final String contact = sharedPreferences.getString("Contact","");
-        final String idstudent = sharedPreferences.getString("Id","");
+        final String idevent = sharedPreferences.getString("Id","");
 
 
 
         SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
-        final String idevent = m.getString("Id","");
+        final String idstudent = m.getString("Id","");
 
 
         Log.i("IDstudent",idstudent);
@@ -64,8 +69,10 @@ public class Commitee_acm_registerevent extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                server_url = server_url+"/"+idevent+"/"+idstudent;
-                Log.i("kiran_testing",server_url);
+                 reg_server_url = url+"/"+"events_registration"+"/"+idevent+"/"+idstudent;
+                //Log.i("kiran_testing",server_url);
+                Log.i("Register_url",reg_server_url);
+                //Log.i("Server_url","Full url "+final_server_url1);
                 parsecode();
 
             }
@@ -73,21 +80,24 @@ public class Commitee_acm_registerevent extends AppCompatActivity {
     }
 
     private void parsecode() {
+
         //events_registration/{event_id}/{student_id}', 'APIsController@registerToEvent');
-        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, server_url, null, new Response.Listener<JSONObject>() {
+        final JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, reg_server_url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
                    // JSONObject jsonObject = response.getJSONObject("");
                     String msg = response.getString("MESSAGE");
                     Log.i("message",msg);
-
+                    Toast.makeText(getBaseContext(),msg,Toast.LENGTH_LONG).show();
+/*
                     if(msg.equals("Registered Successfully")){
                         Toast.makeText(getBaseContext(),"Successfully completed registration",Toast.LENGTH_LONG).show();
                     }
                     else{
-                        Toast.makeText(getBaseContext(),"Technical issue or you are already registered",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getBaseContext(),"you have already registered",Toast.LENGTH_LONG).show();
                     }
+*/
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

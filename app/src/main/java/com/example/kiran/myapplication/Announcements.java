@@ -1,5 +1,6 @@
 package com.example.kiran.myapplication;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -30,7 +31,8 @@ public class Announcements extends AppCompatActivity {
     RequestQueue requestQueue;
     String server_url="http://192.168.0.102:80/api/announcements";
     */
-   String server_url="http://192.168.0.102:80/api/announcements";
+  // String server_url="http://192.168.43.57:80/api/announcements";
+   String announcementurl;
    private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     List<List_items_announcement> listItems;
@@ -46,7 +48,8 @@ public class Announcements extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
 
         listItems = new ArrayList<>();
-
+        SharedPreferences s = getSharedPreferences("Myserver", Context.MODE_PRIVATE);
+        String url = s.getString("Server","");
 
 
         SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
@@ -54,7 +57,8 @@ public class Announcements extends AppCompatActivity {
         final String year = m.getString("Year","");
         final String branch =m.getString("Branch","");
         final String div = m.getString("Division","");
-        server_url = server_url+"/"+year+"/"+branch+"/"+div;
+        //server_url = server_url+"/"+year+"/"+branch+"/"+div;
+        announcementurl = url+"/"+"announcements"+"/"+year+"/"+branch+"/"+div;
         loadRecyclerView();
 /*
         tv1 = (TextView)findViewById(R.id.tv1);
@@ -111,8 +115,8 @@ public class Announcements extends AppCompatActivity {
 
     private void loadRecyclerView() {
 
-
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, server_url, null, new Response.Listener<JSONObject>() {
+        Log.i("announcementurl",announcementurl);
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, announcementurl, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {

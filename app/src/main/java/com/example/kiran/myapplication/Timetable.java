@@ -1,5 +1,6 @@
 package com.example.kiran.myapplication;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -7,21 +8,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.text.*;
+import java.util.*;
 
 public class Timetable extends AppCompatActivity {
     RequestQueue requestQueue;
-    String server_url="http://192.168.0.102:80/api/timetable";
+    //String server_url="http://192.168.43.57:80/api/timetable";
+    String timetableurl;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     List<List_items_timetable> listItems;
@@ -35,8 +42,11 @@ public class Timetable extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
         listItems = new ArrayList<>();
 
-        SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences s = getSharedPreferences("Myserver", Context.MODE_PRIVATE);
+        String url = s.getString("Server","");
 
+
+        SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
         final String sem = m.getString("Sem","");
         final String branch =m.getString("Branch","");
         final String div =m.getString("Division","");
@@ -44,22 +54,22 @@ public class Timetable extends AppCompatActivity {
 
 
 
-      //  SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
-      //  Date d = new Date();
-      //  String day = sdf.format(d);
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+        Date d = new Date();
+        String day = sdf.format(d);
 
-        String day = "THURSDAY";
+       // String day = "THURSDAY";
 
 
         Log.i("day",day);
 
-        server_url = server_url+"/"+sem+"/"+branch+"/"+div+"/"+day;
-        Log.i("tt_testing",server_url);
+        timetableurl = url+"/"+"timetable"+"/"+sem+"/"+branch+"/"+div+"/"+day;
+        Log.i("tt_testing",timetableurl);
         jsonparse();
     }
 
     private void jsonparse() {
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, server_url, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, timetableurl, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {

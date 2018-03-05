@@ -15,6 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -30,6 +31,61 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1]How do you learn subject?"
+                    android:textStyle="bold"
+                    />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp">
+                    <TableRow
+                        >
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rdrgp1"
+                            android:layout_marginTop="10dp">
+                            <RadioButton
+                                android:id="@+id/rb1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="a)I Myself prepare the notes"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="a)I Myself prepare the notes"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="a)I Myself prepare the notes"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="a)I Myself prepare the notes"
+                                />
+                        </RadioGroup>
+
+                    </TableRow>
+                </TableLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#8E24AA">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2]Learning from text books"
+                    android:textStyle="bold"
                     />
                 <TableLayout
                     android:layout_width="match_parent"
@@ -37,25 +93,250 @@
                     android:layout_gravity="center_horizontal"
                     android:padding="10dp">
                     <TableRow>
-                        <CheckBox
-                            android:id="@+id/checkbox1"
+                        <RadioGroup
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="a)I Myself prepare the notes"
-                            android:textSize="10dp"/>
+                            android:id="@+id/rdrgp2"
+                            android:layout_marginTop="10dp">
+                            <RadioButton
+                                android:id="@+id/rb5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="a)I have purchased books for all subjects"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="b)I have taken books from book bank in college"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="c)I sit in library and read books from there"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="d)I do not read text books at all"
+                                />
+                        </RadioGroup>
 
-                        <CheckBox
-                            android:id="@+id/checkbox2"
-                            android:layout_marginTop="30dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10dp"
-                            android:text="a)I Myself prepare the notes"/>
                     </TableRow>
                 </TableLayout>
 
             </android.support.v7.widget.CardView>
-<!--
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#8E24AA">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3]Collective learning"
+                    android:textStyle="bold"
+                    />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp">
+                    <TableRow>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rdrgp3"
+                            android:layout_marginTop="10dp">
+                            <RadioButton
+                                android:id="@+id/rb9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="a)I discuss my difficulties with friend in the class"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="b) We have fomulated study group"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="c)I discuss difficult topics with my senior"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="d)I approach teachers to solve difficulties"
+                                />
+                        </RadioGroup>
+
+                    </TableRow>
+                </TableLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#8E24AA">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4] E-Learning"
+                    android:textStyle="bold"
+                    />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp">
+                    <TableRow>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rdrgp4"
+                            android:layout_marginTop="10dp">
+                            <RadioButton
+                                android:id="@+id/rb13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="a)I use internet for additional informartion,at institute"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="b) I am a member of web-group"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="c) I have internet facility at home"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="a)I don't take help of internet while learning"
+                                />
+                        </RadioGroup>
+
+                    </TableRow>
+                </TableLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#8E24AA">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5]How do you prepare yourself for learning "
+                    android:textStyle="bold"
+                    />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp">
+                    <TableRow>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rdrgp5"
+                            android:layout_marginTop="10dp">
+                            <RadioButton
+                                android:id="@+id/rb17"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="a)I come prepared for the lecture "
+                                />
+                            <RadioButton
+                                android:id="@+id/rb18"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="b)I concentrate fully and listen lecture carefully"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="c)I cannot concentrate fully throughout the lecture"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="d)I do not come prepared or the lecture"
+                                />
+                        </RadioGroup>
+
+                    </TableRow>
+                </TableLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#8E24AA">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="6]My overall % attendance including all subject and kabs is"
+                    />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="10dp">
+                    <TableRow>
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rdrgp6"
+                            android:layout_marginTop="10dp">
+                            <RadioButton
+                                android:id="@+id/rb21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="a)100%"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="b)80%"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb23"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="c)60%"
+                                />
+                            <RadioButton
+                                android:id="@+id/rb24"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="d)below 60%"
+                                />
+                        </RadioGroup>
+
+                    </TableRow>
+                </TableLayout>
+
+            </android.support.v7.widget.CardView>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -548,10 +829,10 @@
                             android:layout_height="wrap_content"
                             android:text="study materials\n provided by \ncourse teacher\n(Grade 4-0)"/>
 
-                        <TextView
+                        <!--<TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Printed study\n materials distributed \n(Grade 4-0)"/>
+                            android:text="Printed study\n materials distributed \n(Grade 4-0)"/>-->
                     </TableRow>
                     <TableRow
                         android:background="@color/colorAccent"
@@ -564,10 +845,11 @@
                             android:id="@+id/cet1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+                        <!--
                         <EditText
                             android:id="@+id/cet2"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"/>-->
                     </TableRow>
                     <TableRow
                         android:layout_marginTop="10dp"
@@ -580,10 +862,10 @@
                             android:id="@+id/cet3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
-                        <EditText
+                        <!--<EditText
                             android:id="@+id/cet4"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"/>-->
                     </TableRow>
                     <TableRow
                         android:background="@color/primaryLightColor"
@@ -596,10 +878,10 @@
                             android:id="@+id/cet5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
-                        <EditText
+                        <!--<EditText
                             android:id="@+id/cet6"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"/>-->
                     </TableRow>
                     <TableRow
                         android:background="@color/colorAccent"
@@ -612,10 +894,10 @@
                             android:id="@+id/cet7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
-                        <EditText
+                        <!--<EditText
                             android:id="@+id/cet8"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"/>-->
                     </TableRow>
                     <EditText
                         android:id="@+id/cet9"
@@ -660,10 +942,10 @@
                             android:layout_height="wrap_content"
                             android:text="Grade  "/>
 
-                        <TextView
+                       <!-- <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="other Remark /suggestion"/>
+                            android:text="other Remark /suggestion"/>-->
                     </TableRow>
                     <TableRow>
                         <TextView
@@ -676,12 +958,12 @@
                             android:layout_height="wrap_content"
                             android:hint="4-0"
                             />
-                        <EditText
+                       <!-- <EditText
                             android:id="@+id/det2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="comment"
-                            />
+                            />-->
 
                     </TableRow>
                     <TableRow>
@@ -695,12 +977,12 @@
                             android:layout_height="wrap_content"
                             android:hint="4-0"
                             />
-                        <EditText
+                       <!-- <EditText
                             android:id="@+id/det4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="comment"
-                            />
+                            />-->
 
                     </TableRow>
                     <TableRow>
@@ -714,12 +996,12 @@
                             android:layout_height="wrap_content"
                             android:hint="4-0"
                             />
-                        <EditText
+                        <!--<EditText
                             android:id="@+id/det6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="comment"
-                            />
+                            />-->
 
                     </TableRow>
                     <TableRow>
@@ -733,12 +1015,12 @@
                             android:layout_height="wrap_content"
                             android:hint="4-0"
                             />
-                        <EditText
+                       <!-- <EditText
                             android:id="@+id/det8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="comment"
-                            />
+                            />-->
 
                     </TableRow>
                     <TableRow>
@@ -752,12 +1034,12 @@
                             android:layout_height="wrap_content"
                             android:hint="4-0"
                             />
-                        <EditText
+                        <!--<EditText
                             android:id="@+id/det10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="comment"
-                            />
+                            />-->
 
                     </TableRow>
                     <TableRow>
@@ -771,12 +1053,12 @@
                             android:layout_height="wrap_content"
                             android:hint="4-0"
                             />
-                        <EditText
+                       <!-- <EditText
                             android:id="@+id/det12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="comment"
-                            />
+                            />-->
 
                     </TableRow>
                     <TableRow>
@@ -790,12 +1072,12 @@
                             android:layout_height="wrap_content"
                             android:hint="4-0"
                             />
-                        <EditText
+                        <!--<EditText
                             android:id="@+id/det14"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="comment"
-                            />
+                            />-->
 
                     </TableRow>
                     <TableRow>
@@ -809,12 +1091,12 @@
                             android:layout_height="wrap_content"
                             android:hint="4-0"
                             />
-                        <EditText
+                       <!-- <EditText
                             android:id="@+id/det16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="comment"
-                            />
+                            />-->
 
                     </TableRow>
 
@@ -827,7 +1109,7 @@
                 android:text="Submit"
                 android:layout_gravity="center_horizontal"
                 />
--->
+
         </LinearLayout>
 
 

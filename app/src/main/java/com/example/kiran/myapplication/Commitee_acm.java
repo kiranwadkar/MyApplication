@@ -24,7 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Commitee_acm extends AppCompatActivity {
-    String server_url="http://192.168.0.102:80/api/events";
+    //String server_url="http://192.168.43.57:80/api/events";
+    String eventurl;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     List<List_items_commitee_acm> listItems;
@@ -38,17 +39,21 @@ public class Commitee_acm extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         requestQueue = Volley.newRequestQueue(this);
         listItems = new ArrayList<>();
+        SharedPreferences s = getSharedPreferences("Myserver", Context.MODE_PRIVATE);
+        String url = s.getString("Server","");
+
         SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
         final String year = m.getString("Year","");
         final String branch =m.getString("Branch","");
-        server_url = server_url+"/"+year+"/"+branch+"/"+"ACM";
-        Log.i("kiran_testing",server_url);
+        //server_url = server_url+"/"+year+"/"+branch+"/"+"ACM";
+        eventurl = url+"/"+"events"+"/"+year+"/"+branch+"/"+"ACM";
+        Log.i("eventurl",eventurl);
         loadRecyclerView();
     }
 
     private void loadRecyclerView() {
 
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, server_url, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, eventurl, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {

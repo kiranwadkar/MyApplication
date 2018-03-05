@@ -1,5 +1,7 @@
 package com.example.kiran.myapplication;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -62,8 +64,12 @@ public class Holidays extends AppCompatActivity {
     }
 
     private void loadRecyclerView() {
-        String jsonurl="http://192.168.0.102:80/api/holidays";
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, jsonurl, null, new Response.Listener<JSONObject>() {
+        //String jsonurl="http://192.168.43.57:80/api/holidays";
+        SharedPreferences s = getSharedPreferences("Myserver", Context.MODE_PRIVATE);
+        String jsonurl = s.getString("Server","");
+        String holidayurl = jsonurl+"/"+"holidays";
+        Log.i("holidayurl",holidayurl);
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET,holidayurl , null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 

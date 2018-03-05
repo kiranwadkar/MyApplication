@@ -1,5 +1,6 @@
 package com.example.kiran.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -29,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button login;
     RequestQueue requestQueue;
-    String server_url="http://192.168.0.102:80/api/login";
+    //String server_url="http://192.168.0.102:80/api/login";
+    String server_url="http://192.168.0.102:80/api";
     String  semail;
     String spassword;
 
@@ -46,7 +48,10 @@ public class MainActivity extends AppCompatActivity {
         final Button login = (Button)findViewById(R.id.login);
         requestQueue = Volley.newRequestQueue(this);
 
-
+        SharedPreferences s = getSharedPreferences("Myserver", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = s.edit();
+        editor.putString("Server",server_url);
+        editor.commit();
 
 
 
@@ -83,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             private void validate() {
-             String   final_server_url =server_url+ "/"+semail+"/"+spassword;
-                //server_url = server_url+"/"+"login"+"/"+semail+"/"+spassword;
+            // String   final_server_url =server_url+ "/"+semail+"/"+spassword;
+                String   final_server_url =server_url+"/"+"login"+ "/"+semail+"/"+spassword;
                 Log.i("Server_url","Full url "+final_server_url);
 
                 final JsonObjectRequest jsonObject = new JsonObjectRequest(Request.Method.GET,final_server_url,null, new Response.Listener<JSONObject>() {

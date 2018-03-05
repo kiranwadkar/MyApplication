@@ -1,5 +1,6 @@
 package com.example.kiran.myapplication;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -26,7 +27,8 @@ public class IA_timetable extends AppCompatActivity {
 
 
     RequestQueue requestQueue;
-    String server_url="http://192.168.0.102:80/api/ia_timetable";
+    //String server_url="http://192.168.43.57:80/api/ia_timetable";
+    String iatturl;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     List<List_items_ia_tt> listItems;
@@ -43,18 +45,20 @@ public class IA_timetable extends AppCompatActivity {
         //parse = (Button)findViewById(R.id.parse);
 
         listItems = new ArrayList<>();
+        SharedPreferences s = getSharedPreferences("Myserver", Context.MODE_PRIVATE);
+        String url = s.getString("Server","");
 
         SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
        // final String year = m.getString("Year","");
         final String sem = m.getString("Sem","");
         final String branch =m.getString("Branch","");
-        server_url = server_url+"/"+branch+"/"+sem;
-        Log.i("ia_testing",server_url);
+        iatturl = url+"/"+"ia_timetable"+"/"+branch+"/"+sem;
+        Log.i("ia_testing",iatturl);
        jsonparse();
     }
 
     private void jsonparse() {
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, server_url, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, iatturl, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {

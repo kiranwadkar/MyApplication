@@ -19,47 +19,6 @@
             android:layout_height="wrap_content">
 
             <TableRow
-                android:background="#F44336"
-                android:layout_marginTop="5dp"
-                >
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Subject : "
-                    />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Subject show here"
-                    />
-            </TableRow>
-
-            <TableRow
-                android:background="#FFC107"
-                android:layout_marginTop="5dp">
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Teacher : "
-                    />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:text="Teacher nm Show Here" />
-            </TableRow>
-
-            <TableRow
                 android:background="#FFEA00"
                 android:layout_marginTop="5dp">
 
@@ -101,6 +60,48 @@
                     />
 
             </TableRow>
+            <TableRow
+                android:background="#F44336"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Subject : "
+                    />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Subject show here"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:background="#FFC107"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Teacher : "
+                    />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Teacher nm Show Here" />
+            </TableRow>
+
+
 
             <TableRow
                 android:background="#03A9F4"
