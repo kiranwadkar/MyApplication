@@ -398,6 +398,11 @@
                                 android:text="Enter Lecurer name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/lect1rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
 
                         <TableRow >
@@ -417,8 +422,13 @@
                                 android:text="Enter Tutorial name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/tuto1rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
-
+                        <!--
                         <RatingBar
                             android:id="@+id/rating1"
                             android:layout_width="wrap_content"
@@ -427,6 +437,7 @@
                             android:numStars="5"
                             android:rating="0.0"
                             android:stepSize="1.0" />
+                            -->
                     </TableLayout>
 
 
@@ -453,6 +464,7 @@
                                 android:text="Enter Subject 1  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+
                         </TableRow>
 
                         <TableRow >
@@ -472,6 +484,11 @@
                                 android:text="Enter Lecurer name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/lect2rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
 
                         <TableRow >
@@ -491,8 +508,13 @@
                                 android:text="Enter Tutorial name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/tuto2rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
-
+                        <!--
                         <RatingBar
                             android:id="@+id/rating2"
                             android:layout_width="wrap_content"
@@ -501,6 +523,7 @@
                             android:numStars="5"
                             android:rating="0.0"
                             android:stepSize="1.0" />
+                            -->
                     </TableLayout>
 
                     <TableLayout
@@ -545,6 +568,11 @@
                                 android:text="Enter Lecurer name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/lect3rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
 
                         <TableRow >
@@ -564,8 +592,13 @@
                                 android:text="Enter Tutorial name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/tuto3rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
-
+                        <!--
                         <RatingBar
                             android:id="@+id/rating3"
                             android:layout_width="wrap_content"
@@ -574,6 +607,7 @@
                             android:numStars="5"
                             android:rating="0.0"
                             android:stepSize="1.0" />
+                            -->
                     </TableLayout>
                     <TableLayout
                         android:layout_width="wrap_content"
@@ -617,6 +651,11 @@
                                 android:text="Enter Lecurer name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/lect4rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
 
                         <TableRow>
@@ -636,8 +675,13 @@
                                 android:text="Enter Tutorial name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/tuto4rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
-
+                        <!--
                         <RatingBar
                             android:id="@+id/rating4"
                             android:layout_width="wrap_content"
@@ -646,6 +690,7 @@
                             android:numStars="5"
                             android:rating="0.0"
                             android:stepSize="1.0" />
+                            -->
                     </TableLayout>
                     <TableLayout
                         android:layout_width="wrap_content"
@@ -689,6 +734,11 @@
                                 android:text="Enter Lecurer name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/lect5rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
 
                         <TableRow >
@@ -708,8 +758,13 @@
                                 android:text="Enter Tutorial name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/tuto5rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
-
+                        <!--
                         <RatingBar
                             android:id="@+id/rating5"
                             android:layout_width="wrap_content"
@@ -718,6 +773,7 @@
                             android:numStars="5"
                             android:rating="0.0"
                             android:stepSize="1.0" />
+                            -->
                     </TableLayout>
                     <TableLayout
                         android:layout_width="wrap_content"
@@ -761,6 +817,11 @@
                                 android:text="Enter Lecurer name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/lect6rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
 
                         <TableRow >
@@ -780,8 +841,13 @@
                                 android:text="Enter Tutorial name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
+                            <EditText
+                                android:id="@+id/tuto6rating"
+                                android:hint="0-4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
                         </TableRow>
-
+                        <!--
                         <RatingBar
                             android:id="@+id/rating6"
                             android:layout_width="wrap_content"
@@ -790,6 +856,7 @@
                             android:numStars="5"
                             android:rating="0.0"
                             android:stepSize="1.0" />
+                            -->
                     </TableLayout>
 
                 </LinearLayout>
@@ -829,10 +896,10 @@
                             android:layout_height="wrap_content"
                             android:text="study materials\n provided by \ncourse teacher\n(Grade 4-0)"/>
 
-                        <!--<TextView
+                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Printed study\n materials distributed \n(Grade 4-0)"/>-->
+                            android:text="Printed study\n materials distributed \n(Grade 4-0)"/>
                     </TableRow>
                     <TableRow
                         android:background="@color/colorAccent"
@@ -845,11 +912,11 @@
                             android:id="@+id/cet1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
-                        <!--
+
                         <EditText
                             android:id="@+id/cet2"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>-->
+                            android:layout_height="wrap_content"/>
                     </TableRow>
                     <TableRow
                         android:layout_marginTop="10dp"
@@ -862,10 +929,10 @@
                             android:id="@+id/cet3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
-                        <!--<EditText
+                        <EditText
                             android:id="@+id/cet4"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>-->
+                            android:layout_height="wrap_content"/>
                     </TableRow>
                     <TableRow
                         android:background="@color/primaryLightColor"
@@ -878,10 +945,10 @@
                             android:id="@+id/cet5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
-                        <!--<EditText
+                        <EditText
                             android:id="@+id/cet6"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>-->
+                            android:layout_height="wrap_content"/>
                     </TableRow>
                     <TableRow
                         android:background="@color/colorAccent"
@@ -894,10 +961,10 @@
                             android:id="@+id/cet7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
-                        <!--<EditText
+                        <EditText
                             android:id="@+id/cet8"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>-->
+                            android:layout_height="wrap_content"/>
                     </TableRow>
                     <EditText
                         android:id="@+id/cet9"
@@ -972,7 +1039,7 @@
                             android:layout_height="80dp"
                             android:text="2]Co-operation of \nnon-teaching staff from \n Examination cell"/>
                         <EditText
-                            android:id="@+id/det3"
+                            android:id="@+id/det2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -991,7 +1058,7 @@
                             android:layout_height="80dp"
                             android:text="3]Co-operation of \nnon-teaching staff from \n Institute Library"/>
                         <EditText
-                            android:id="@+id/det5"
+                            android:id="@+id/det3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1010,7 +1077,7 @@
                             android:layout_height="80dp"
                             android:text="3]Co-operation of \nnon-teaching staff from \n Department Laboratory"/>
                         <EditText
-                            android:id="@+id/det7"
+                            android:id="@+id/det4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1029,7 +1096,7 @@
                             android:layout_height="wrap_content"
                             android:text="4]cleanliness of classroom"/>
                         <EditText
-                            android:id="@+id/det9"
+                            android:id="@+id/det4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1048,7 +1115,7 @@
                             android:layout_height="wrap_content"
                             android:text="5]Drinking water facility"/>
                         <EditText
-                            android:id="@+id/det11"
+                            android:id="@+id/det5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1067,7 +1134,7 @@
                             android:layout_height="wrap_content"
                             android:text="6]Upkeep of rest room"/>
                         <EditText
-                            android:id="@+id/det13"
+                            android:id="@+id/det6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1086,7 +1153,7 @@
                             android:layout_height="wrap_content"
                             android:text="7]Canteen Facility"/>
                         <EditText
-                            android:id="@+id/det15"
+                            android:id="@+id/det7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
