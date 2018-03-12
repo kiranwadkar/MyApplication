@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class Commitees extends AppCompatActivity {
-    ImageView acm,csi,eesa,ieee,iete,itsa;
+    ImageView acm,csi,eesa,ieee,iete,itsa,other;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +18,9 @@ public class Commitees extends AppCompatActivity {
         ieee = (ImageView) findViewById(R.id.ieee);
         iete = (ImageView) findViewById(R.id.iete);
         itsa = (ImageView) findViewById(R.id.itsa);
+        other = (ImageView) findViewById(R.id.other);
+
+
 
 
         acm.setOnClickListener(new View.OnClickListener() {
@@ -25,6 +28,22 @@ public class Commitees extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i1 = new Intent(getBaseContext(),Commitee_acm.class);
                 startActivity(i1);
+            }
+        });
+
+        other.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent(getBaseContext(),Commitee_other.class);
+                startActivity(i2);
+            }
+        });
+
+        ieee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i3= new Intent(getBaseContext(),Commitee_ieee.class);
+                startActivity(i3);
             }
         });
     }

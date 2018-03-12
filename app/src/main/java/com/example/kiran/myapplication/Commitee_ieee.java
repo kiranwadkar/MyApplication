@@ -23,81 +23,68 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Timetable extends AppCompatActivity {
-    RequestQueue requestQueue;
-    //String server_url="http://192.168.43.57:80/api/timetable";
-    String timetableurl;
+public class Commitee_ieee extends AppCompatActivity {
+    String ieeeurl;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
-    List<List_items_timetable> listItems;
+    List<List_items_commitee_ieee> listItems;
+    RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_timetable);
+        setContentView(R.layout.activity_commitee_ieee);
+
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         requestQueue = Volley.newRequestQueue(this);
         listItems = new ArrayList<>();
-
         SharedPreferences s = getSharedPreferences("Myserver", Context.MODE_PRIVATE);
         String url = s.getString("Server","");
 
-
         SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
-        final String sem = m.getString("Sem","");
+        final String year = m.getString("Year","");
         final String branch =m.getString("Branch","");
-        final String div =m.getString("Division","");
 
-
-
-
-        //SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
-        //Date d = new Date();
-        //String day = sdf.format(d);
-
-        String day = "THURSDAY";
-
-
-        Log.i("day",day);
-
-        timetableurl = url+"/"+"timetable"+"/"+sem+"/"+branch+"/"+div+"/"+day;
-        Log.i("tt_testing",timetableurl);
-        jsonparse();
+        ieeeurl = url+"/"+"events"+"/"+year+"/"+branch+"/"+"IEEE";
+        Log.i("eventurl",ieeeurl);
+        loadRecyclerView();
     }
 
-    private void jsonparse() {
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, timetableurl, null, new Response.Listener<JSONObject>() {
+    private void loadRecyclerView() {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, ieeeurl, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    JSONArray jsonArray = response.getJSONArray("timetable");
-                    for(int i = 0; i<jsonArray.length(); i++){
-                        JSONObject a1 = jsonArray.getJSONObject(i);
-                        String sub = a1.getString("subject");
-                        //JSONObject a2 = jsonArray.getJSONObject(i);
-                        String teacher = a1.getString("teacher");
-                        //JSONObject a3 = jsonArray.getJSONObject(i);
-                        String start = a1.getString("start_time");
-                        //JSONObject a4 = jsonArray.getJSONObject(i);
-                        String end = a1.getString("end_time");
-                        String block = a1.getString("block");
-                        Log.i("Subject",sub);
-                        Log.i("Teacher",teacher);
-                        Log.i("start time",start);
-                        Log.i("end time",end);
-                        Log.i("Block",block);
+                    JSONArray jsonArray = response.getJSONArray("events");
+                    for(int i=0;i<jsonArray.length();i++){
+                        JSONObject o1 = jsonArray.getJSONObject(i);
+                        String head = o1.getString("name");
+                        String body = o1.getString("details");
+                        Log.i("Head22",head);
+                        int p = o1.getInt("price");
+                        String price = String.valueOf(p);
+                        Log.i("price",price);
 
-                        List_items_timetable item =new List_items_timetable(sub,teacher,start,end,block);
+                        int id = o1.getInt("id");
+                        String id1 = String.valueOf(id);
+                        Log.i("id",id1);
+                        String contact_name = o1.getString("contact_name");
+
+                        Log.i("Head22",head);
+                        Log.i("Body22",body);
+
+
+
+                        List_items_commitee_ieee item =new List_items_commitee_ieee(head,body,price,contact_name,id1);
                         listItems.add(item);
-                    }
-                    adapter = new RecyclerViewAdapterTimetable(listItems,getBaseContext());
-                    recyclerView.setAdapter(adapter);
 
+                    }
+                    adapter = new RecyclerViewAdapterCommiteeIeee(listItems,getBaseContext());
+                    recyclerView.setAdapter(adapter);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
         }, new Response.ErrorListener() {
             @Override

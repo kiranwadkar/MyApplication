@@ -30,7 +30,12 @@
         <activity android:name=".Commitee_acm_registerevent" />
         <activity android:name=".IA_timetable" />
         <activity android:name=".Timetable" />
-        <activity android:name=".Feedback"></activity>
+        <activity android:name=".Feedback" />
+        <activity android:name=".Commitee_other" />
+        <activity android:name=".Commitee_other_registerevent" />
+        <activity android:name=".Commitee_ieee" />
+        <activity android:name=".Commitee_ieee_registerevent" />
+        <activity android:name=".Announcement_display_desc"></activity>
     </application>
 
 </manifest>

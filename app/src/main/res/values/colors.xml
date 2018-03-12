@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
+
  <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-</resources>-->
+</resources>
 
 
 
@@ -19,7 +19,8 @@
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#ffffff</color>
     </resources>
-     -->
+    -->
+<!--
 <resources>
 <color name="colorPrimary">#536dfe</color>
 <color name="primaryLightColor">#8f9bff</color>
@@ -31,6 +32,7 @@
 <color name="primaryTextColor">#000000</color>
 <color name="secondaryTextColor">#ffffff</color>
 </resources>
+-->
 <!--
 <resources>
 <color name="primaryColor">#00b8d4</color>
@@ -43,28 +45,18 @@
 <color name="secondaryTextColor">#000000</color>
 </resources>
 -->
+<!--
+<resources>
 
-<!--
-<resources>
-<color name="primaryColor">#ffd740</color>
-<color name="primaryLightColor">#ffff74</color>
-<color name="primaryDarkColor">#c8a600</color>
-<color name="secondaryColor">#ccff90</color>
-<color name="secondaryLightColor">#ffffc2</color>
-<color name="secondaryDarkColor">#99cc60</color>
+<color name="primaryColor">#1e88e5</color>
+<color name="primaryLightColor">#6ab7ff</color>
+<color name="primaryDarkColor">#005cb2</color>
+<color name="secondaryColor">#1a237e</color>
+<color name="secondaryLightColor">#534bae</color>
+<color name="secondaryDarkColor">#000051</color>
 <color name="primaryTextColor">#000000</color>
-<color name="secondaryTextColor">#000000</color>
+<color name="secondaryTextColor">#ffffff</color>
 </resources>
+
 -->
-<!--
-<resources>
-<color name="primaryColor">#ff3d00</color>
-<color name="primaryLightColor">#ff7539</color>
-<color name="primaryDarkColor">#c30000</color>
-<color name="secondaryColor">#ccff90</color>
-<color name="secondaryLightColor">#ffffc2</color>
-<color name="secondaryDarkColor">#99cc60</color>
-<color name="primaryTextColor">#000000</color>
-<color name="secondaryTextColor">#000000</color>
-</resources>
--->
+

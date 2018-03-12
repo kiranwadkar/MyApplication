@@ -1,17 +1,17 @@
 package com.example.kiran.myapplication;
 
 /**
- * Created by Kiran on 11-02-2018.
+ * Created by Kiran on 10-03-2018.
  */
 
-public class List_items_commitee_acm {
+public class List_items_commitee_other {
     private String head;
     private String body;
     private String price;
     private String contact;
     private String id;
 
-    public List_items_commitee_acm(String head,String body,String price,String contact,String id) {
+    public List_items_commitee_other(String head,String body,String price,String contact,String id) {
         this.head = head;
         this.body = body;
         this.price = price;
@@ -39,3 +39,4 @@ public class List_items_commitee_acm {
         return id;
     }
 }
+

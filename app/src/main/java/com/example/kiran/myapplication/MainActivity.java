@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     Button login;
     RequestQueue requestQueue;
     //String server_url="http://192.168.0.102:80/api/login";
-    String server_url="http://192.168.0.102:80/api";
+    String server_url="http://192.168.0.103:80/api";
     String  semail;
     String spassword;
 
@@ -65,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
                semail = email.getText().toString();
                spassword = password.getText().toString();
+
+               Log.i("email",semail);
+               Log.i("pass",spassword);
 
                 if(isValidEmail(semail)){
                     if(isValidPassword(spassword)){
@@ -157,11 +160,13 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 }, new Response.ErrorListener() {
+
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(getBaseContext(),"Error",Toast.LENGTH_SHORT).show();
                         error.printStackTrace();
                     }
+
                 });
                 requestQueue.add(jsonObject);
                            }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.kiran.myapplication.Placement_display_desc">
+    tools:context="com.example.kiran.myapplication.Commitee_other_registerevent">
 
     <TextView
         android:layout_marginTop="20dp"
@@ -26,16 +26,46 @@
         android:textSize="15dp"
         android:padding="10dp"
         />
+
+
+    <TextView
+        android:id="@+id/tvprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sample body descroption "
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tvcontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sample body descroption "
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:padding="10dp"
+        />
+
     <TextView
         android:id="@+id/tvid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sample body descroption "
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:padding="10dp"
+        />
+
     <Button
-        android:id="@+id/submit"
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:textColor="#ff22ff"
         android:text="Register"
-        />
+        android:layout_marginTop="30dp"/>
+
 
 </LinearLayout>

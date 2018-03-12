@@ -127,9 +127,12 @@ public class Announcements extends AppCompatActivity {
                         String head = a1.getString("head");
                        // JSONObject a2 = jsonArray.getJSONObject(i);
                         String body = a1.getString("body");
+                        int id = a1.getInt("id");
+                        String id1 = String.valueOf(id);
+                        Log.i("id",id1);
                         Log.i("Head",head);
                         Log.i("Body",body);
-                        List_items_announcement item =new  List_items_announcement(head,body);
+                        List_items_announcement item =new  List_items_announcement(head,body,id1);
                         listItems.add(item);
                         //tv1.append(head+"\n" +body+"\n");
 

@@ -75,16 +75,9 @@ public class Commitee_acm extends AppCompatActivity {
                         Log.i("Head22",head);
                         Log.i("Body22",body);
 
-                        SharedPreferences sharedPreferences = getSharedPreferences("Myevent", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        //editor.putString("Head",head);
-                        //editor.putString("Body",body);
-                        editor.putString("Price", price);
-                        editor.putString("Contact", contact_name);
-                        editor.putString("Id",id1);
-                        editor.commit();
 
-                        List_items_commitee_acm item =new List_items_commitee_acm(head,body);
+
+                        List_items_commitee_acm item =new List_items_commitee_acm(head,body,price,contact_name,id1);
                         listItems.add(item);
                     }
                     adapter = new RecyclerViewAdapterCommiteeAcm(listItems,getBaseContext());

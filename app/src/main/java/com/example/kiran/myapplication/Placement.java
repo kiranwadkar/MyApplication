@@ -73,7 +73,14 @@ public class Placement extends AppCompatActivity {
                         String body = a1.getString("body");
                         Log.i("Head",head);
                         Log.i("Body",body);
-                        List_items_placement item =new List_items_placement(head,body);
+
+                        int id = a1.getInt("id");
+                        String id1 = String.valueOf(id);
+                        Log.i("id",id1);
+
+
+
+                        List_items_placement item =new List_items_placement(head,body,id1);
                         listItems.add(item);
                         //tv1.append(head+"\n" +body+"\n");
 

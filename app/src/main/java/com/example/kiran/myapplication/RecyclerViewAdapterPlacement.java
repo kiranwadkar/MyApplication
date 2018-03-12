@@ -45,17 +45,13 @@ public class RecyclerViewAdapterPlacement extends RecyclerView.Adapter<RecyclerV
                 Intent i = new Intent (context,Placement_display_desc.class);
                 String head = listItem.getHead().toString();
                 String body = listItem.getBody().toString();
-                Bundle bb = new Bundle();
-                bb.putString("1",head);
-                bb.putString("2",body);
-                i.putExtras(bb);
+                String id = listItem.getId().toString();
+                Bundle bplace = new Bundle();
+                bplace.putString("1",head);
+                bplace.putString("2",body);
+                bplace.putString("3",id);
+                i.putExtras(bplace);
                 context.startActivity(i);
-
-
-
-
-
-
 
             }
         });
