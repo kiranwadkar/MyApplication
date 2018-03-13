@@ -22,6 +22,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.text.*;
+import java.util.Date;
 
 public class Timetable extends AppCompatActivity {
     RequestQueue requestQueue;
@@ -52,11 +54,11 @@ public class Timetable extends AppCompatActivity {
 
 
 
-        //SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
-        //Date d = new Date();
-        //String day = sdf.format(d);
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+        Date d = new Date();
+        String day = sdf.format(d);
 
-        String day = "THURSDAY";
+        //String day = "THURSDAY";
 
 
         Log.i("day",day);

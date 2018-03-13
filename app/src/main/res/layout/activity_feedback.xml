@@ -55,19 +55,19 @@
                                         android:id="@+id/rb2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="a)I Myself prepare the notes"
+                                        android:text="b)I Myself prepare the notes"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="a)I Myself prepare the notes"
+                                        android:text="c)I Myself prepare the notes"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb4"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="a)I Myself prepare the notes"
+                                        android:text="d)I Myself prepare the notes"
                                         />
                                 </RadioGroup>
 
@@ -349,7 +349,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
-                        app:cardBackgroundColor="#8E24AA">
+                        app:cardBackgroundColor="#E65100">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -376,7 +376,7 @@
                                         android:id="@+id/edsub1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:text="Enter Subject 1  "
+                                        android:hint="Enter Subject 1  "
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textSize="15dp" />
                                 </TableRow>
@@ -395,12 +395,12 @@
                                         android:id="@+id/edlect1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:text="Enter Lecurer name  "
+                                        android:hint="Enter Lecurer name  "
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textSize="15dp" />
                                     <EditText
                                         android:id="@+id/lect1rating"
-                                        android:hint="0-4"
+                                        android:hint="1-5"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"/>
                                 </TableRow>
@@ -419,12 +419,12 @@
                                         android:id="@+id/edtuto1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:text="Enter Tutorial name  "
+                                        android:hint="Enter Tutorial name  "
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textSize="15dp" />
                                     <EditText
                                         android:id="@+id/tuto1rating"
-                                        android:hint="0-4"
+                                        android:hint="1-5"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"/>
                                 </TableRow>
@@ -461,7 +461,7 @@
                                 android:id="@+id/edsub2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Subject 1  "
+                                android:hint="Enter Subject 2  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -481,12 +481,12 @@
                                 android:id="@+id/edlect2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Lecurer name  "
+                                android:hint="Enter Lecurer name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/lect2rating"
-                                android:hint="0-4"
+                                android:hint="1-5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -505,12 +505,12 @@
                                 android:id="@+id/edtuto2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Tutorial name  "
+                                android:hint="Enter Tutorial name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/tuto2rating"
-                                android:hint="0-4"
+                                android:hint="1-5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -546,7 +546,7 @@
                                 android:id="@+id/edsub3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Subject 1  "
+                                android:hint="Enter Subject 3  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                         </TableRow>
@@ -565,12 +565,12 @@
                                 android:id="@+id/edlect3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Lecurer name  "
+                                android:hint="Enter Lecurer name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/lect3rating"
-                                android:hint="0-4"
+                                android:hint="1-5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -589,12 +589,12 @@
                                 android:id="@+id/edtuto3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Tutorial name  "
+                                android:hint="Enter Tutorial name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/tuto3rating"
-                                android:hint="0-4"
+                                android:hint="1-5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -629,7 +629,7 @@
                                 android:id="@+id/edsub4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Subject 1  "
+                                android:hint="Enter Subject 4  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                         </TableRow>
@@ -648,12 +648,12 @@
                                 android:id="@+id/edlect4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Lecurer name  "
+                                android:hint="Enter Lecurer name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/lect4rating"
-                                android:hint="0-4"
+                                android:hint="1-5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -672,12 +672,12 @@
                                 android:id="@+id/edtuto4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Tutorial name  "
+                                android:hint="Enter Tutorial name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/tuto4rating"
-                                android:hint="0-4"
+                                android:hint="1-5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -712,7 +712,7 @@
                                 android:id="@+id/edsub5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Subject 1  "
+                                android:hint="Enter Subject 5  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                         </TableRow>
@@ -731,12 +731,12 @@
                                 android:id="@+id/edlect5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Lecurer name  "
+                                android:hint="Enter Lecurer name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/lect5rating"
-                                android:hint="0-4"
+                                android:hint="1-5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -755,12 +755,12 @@
                                 android:id="@+id/edtuto5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Tutorial name  "
+                                android:hint="Enter Tutorial name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/tuto5rating"
-                                android:hint="0-4"
+                                android:hint="1-5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -795,7 +795,7 @@
                                 android:id="@+id/edsub6"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Subject 1  "
+                                android:hint="Enter Subject 6  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                         </TableRow>
@@ -814,12 +814,12 @@
                                 android:id="@+id/edlect6"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Lecurer name  "
+                                android:hint="Enter Lecurer name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/lect6rating"
-                                android:hint="0-4"
+                                android:hint="1-5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -838,12 +838,12 @@
                                 android:id="@+id/edtuto6"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Enter Tutorial name  "
+                                android:hint="Enter Tutorial name  "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/tuto6rating"
-                                android:hint="0-4"
+                                android:hint="1-5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -876,7 +876,7 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#E4D96F">
+                app:cardBackgroundColor="#B71C1C">
                 <TableLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -902,7 +902,7 @@
                             android:text="Printed study\n materials distributed \n(Grade 4-0)"/>
                     </TableRow>
                     <TableRow
-                        android:background="@color/colorAccent"
+
                         android:layout_marginTop="10dp">
                         <TextView
                             android:layout_width="wrap_content"
@@ -920,7 +920,7 @@
                     </TableRow>
                     <TableRow
                         android:layout_marginTop="10dp"
-                        android:background="#8E24AA">
+                        >
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -935,7 +935,7 @@
                             android:layout_height="wrap_content"/>
                     </TableRow>
                     <TableRow
-                        android:background="#8E24AA"
+
                         android:layout_marginTop="10dp">
                         <TextView
                             android:layout_width="wrap_content"
@@ -951,7 +951,7 @@
                             android:layout_height="wrap_content"/>
                     </TableRow>
                     <TableRow
-                        android:background="@color/colorAccent"
+
                         android:layout_marginTop="10dp">
                         <TextView
                             android:layout_width="wrap_content"
@@ -987,7 +987,7 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#1b5e20">
+                app:cardBackgroundColor="#1B5E20">
                 <TableLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

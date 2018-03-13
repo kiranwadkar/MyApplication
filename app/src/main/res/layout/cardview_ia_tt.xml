@@ -21,7 +21,7 @@
             >
 
             <TableRow
-                android:background="#DCE775"
+                android:background="#4A148C"
 
                 >
                 <TextView
@@ -62,7 +62,7 @@
             </TableRow>
 
             <TableRow
-                android:background="#FFCC80"
+                android:background="#E91E63"
                 android:layout_marginTop="5dp">
                 <TextView
                     android:id="@+id/textView2"

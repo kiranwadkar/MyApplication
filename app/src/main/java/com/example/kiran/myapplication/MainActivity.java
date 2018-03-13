@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     Button login;
     RequestQueue requestQueue;
     //String server_url="http://192.168.0.102:80/api/login";
-    String server_url="http://192.168.0.103:80/api";
+    String server_url="http://192.168.0.102:80/api";
     String  semail;
     String spassword;
 
