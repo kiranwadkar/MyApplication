@@ -26,7 +26,7 @@
                     android:layout_height="190dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
-
+                    android:id="@+id/cardacm"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -58,7 +58,9 @@
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:clickable="true"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:id="@+id/cardcsi"
+                    >
 
 
                     <LinearLayout
@@ -99,7 +101,8 @@
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:clickable="true"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:id="@+id/carditsa">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -129,7 +132,8 @@
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:clickable="true"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:id="@+id/cardieee">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -165,7 +169,8 @@
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:clickable="true"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:id="@+id/cardiete">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -195,7 +200,10 @@
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:clickable="true"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    android:id="@+id/cardeesa"
+                    >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -231,7 +239,8 @@
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:clickable="true"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:id="@+id/cardother">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

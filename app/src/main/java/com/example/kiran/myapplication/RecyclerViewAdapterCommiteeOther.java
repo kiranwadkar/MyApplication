@@ -53,6 +53,7 @@ public class RecyclerViewAdapterCommiteeOther extends RecyclerView.Adapter<Recyc
                 bother.putString("4",contact);
                 bother.putString("5",id);
                 i.putExtras(bother);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }
         });

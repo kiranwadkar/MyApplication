@@ -79,6 +79,7 @@ public class Commitee_acm extends AppCompatActivity {
 
                         List_items_commitee_acm item =new List_items_commitee_acm(head,body,price,contact_name,id1);
                         listItems.add(item);
+
                     }
                     adapter = new RecyclerViewAdapterCommiteeAcm(listItems,getBaseContext());
                     recyclerView.setAdapter(adapter);

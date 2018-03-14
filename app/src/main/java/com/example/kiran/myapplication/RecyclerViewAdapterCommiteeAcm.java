@@ -55,6 +55,7 @@ public class RecyclerViewAdapterCommiteeAcm extends RecyclerView.Adapter<Recycle
                 bacm.putString("4",contact);
                 bacm.putString("5",id);
                 i.putExtras(bacm);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }
 

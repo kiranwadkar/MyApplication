@@ -54,6 +54,7 @@ public class RecyclerViewAdapterCommiteeIeee extends RecyclerView.Adapter<Recycl
                 bb.putString("4",contact);
                 bb.putString("5",id);
                 i.putExtras(bb);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }
         });

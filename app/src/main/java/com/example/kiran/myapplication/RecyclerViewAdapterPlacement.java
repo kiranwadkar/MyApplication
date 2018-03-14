@@ -51,6 +51,7 @@ public class RecyclerViewAdapterPlacement extends RecyclerView.Adapter<RecyclerV
                 bplace.putString("2",body);
                 bplace.putString("3",id);
                 i.putExtras(bplace);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
 
             }

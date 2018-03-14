@@ -293,6 +293,9 @@ public class Feedback extends AppCompatActivity {
                         public void onResponse(JSONObject response) {
 
                             try {
+                                //JSONObject json = new JSONObject("MESSAGE");
+
+                               //JSONArray jsarr = json.toJSONArray();
                                 String msg = response.getString("MESSAGE");
                                 Toast.makeText(getBaseContext(),msg,Toast.LENGTH_LONG).show();
                             } catch (JSONException e) {
@@ -305,7 +308,9 @@ public class Feedback extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             Log.i("Error_coming",error.toString());
-                            Toast.makeText(getBaseContext(),error.toString(),Toast.LENGTH_LONG).show();
+                            if(error.toString().contains("You already submitted your both feedbacks for this sem.")) {
+                                Toast.makeText(getBaseContext(),"You already submitted your both feedbacks for this sem." , Toast.LENGTH_LONG).show();
+                            }
                         }
                     }){
                         /*

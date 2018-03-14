@@ -53,6 +53,7 @@ public class RecyclerViewAdapterAnnouncement extends RecyclerView.Adapter<Recycl
                 bannouncement.putString("2",body);
                 bannouncement.putString("3",id);
                 i.putExtras(bannouncement);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }
         });

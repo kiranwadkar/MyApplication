@@ -3,19 +3,84 @@ package com.example.kiran.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.ImageView;
+
 //import static android.os.Build.ID;
 public class Dashboard extends AppCompatActivity {
 
-    ImageView holidays,event,announcement,placement,ia,timetable,feedback;
+   // ImageView holidays,event,announcement,placement,ia,timetable,feedback;
 
-
+    CardView cardtt,cardevent,cardia,cardplacement,cardholiday,cardannouncement,cardfeedback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        cardtt = (CardView)findViewById(R.id.cardtimetable);
+        cardevent = (CardView)findViewById(R.id.cardviewevent);
+        cardia = (CardView) findViewById(R.id.cardviewia);
+        cardplacement = (CardView)findViewById(R.id.cardviewplacement);
+        cardholiday = (CardView)findViewById(R.id.cardviewholiday);
+        cardannouncement =(CardView)findViewById(R.id.cardviewannouncement);
+        cardfeedback = (CardView)findViewById(R.id.cardviewfeedback);
+
+        cardtt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i1 = new Intent(getBaseContext(),Timetable.class);
+                startActivity(i1);
+            }
+        });
+
+        cardevent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent(getBaseContext(),Commitees.class);
+                startActivity(i2);
+            }
+        });
+
+        cardia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i3 = new Intent(getBaseContext(),IA_timetable.class);
+                startActivity(i3);
+            }
+        });
+
+        cardholiday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i4 = new Intent(getBaseContext(),Holidays.class);
+                startActivity(i4);
+            }
+        });
+
+        cardannouncement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i5 = new Intent(getBaseContext(),Announcements.class);
+                startActivity(i5);
+            }
+        });
+
+        cardfeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i6 = new Intent(getBaseContext(),Feedback.class);
+                startActivity(i6);
+            }
+        });
+
+        cardplacement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i7 =new Intent(getBaseContext(),Placement.class);
+                startActivity(i7);
+            }
+        });
+        /*
         holidays = (ImageView) findViewById(R.id.holidays);
         event = (ImageView)findViewById(R.id.event);
         announcement = (ImageView)findViewById(R.id.annoucements);
@@ -85,7 +150,7 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(i3);
             }
         });
-
+        */
 
     }
 }
