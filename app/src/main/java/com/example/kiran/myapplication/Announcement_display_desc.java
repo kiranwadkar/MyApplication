@@ -1,11 +1,20 @@
 package com.example.kiran.myapplication;
 
+import android.app.DownloadManager;
+import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -18,11 +27,23 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ArrayList;
+
 public class Announcement_display_desc extends AppCompatActivity {
-    TextView tv1,tv2;
+    TextView tv1,tv2,tv3;
     String announcementdispurl;
     RequestQueue requestQueue;
     String url;
+    Button download;
+    DownloadManager downloadManager;
+    String year,branch,div;
+    Uri uri;
+    URL downurl;
+    ArrayList<Long> list = new ArrayList<>();
+    long refid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +51,10 @@ public class Announcement_display_desc extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
         tv1 = (TextView) findViewById(R.id.tvhead);
         tv2 = (TextView) findViewById(R.id.tvbody);
+        tv3 = (TextView)findViewById(R.id.tvissue);
+        download =(Button)findViewById(R.id.download);
+        downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+
 
 
         SharedPreferences s = getSharedPreferences("Myserver", Context.MODE_PRIVATE);
@@ -44,15 +69,18 @@ public class Announcement_display_desc extends AppCompatActivity {
 
         SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
         //String name = m.getString("Name","");
-        final String year = m.getString("Year","");
-        final String branch =m.getString("Branch","");
-        final String div = m.getString("Division","");
+         year = m.getString("Year","");
+        branch =m.getString("Branch","");
+         div = m.getString("Division","");
         //server_url = server_url+"/"+year+"/"+branch+"/"+div;
         announcementdispurl = url+"/"+"announcements"+"/"+year+"/"+branch+"/"+div+"/"+id;
         Log.i("announcement_disp",announcementdispurl);
 
         Display();
+
     }
+
+
 
     private void Display() {
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, announcementdispurl, null, new Response.Listener<JSONObject>() {
@@ -64,12 +92,58 @@ public class Announcement_display_desc extends AppCompatActivity {
 
                         String head = jsonObject.getString("head");
                         String body = jsonObject.getString("body");
+                        String issue = jsonObject.getString("issued_by");
+
+                        final String file_name = jsonObject.getString("file_name");
+                       final String original_filename = jsonObject.getString("original_filename");
+                        final String fid = jsonObject.getString("id");
+
                         Log.i("Head",head);
                         Log.i("Body",body);
+                        Log.i("issue",issue);
+                        Log.i("file_name",file_name);
+                        Log.i("original_filename",original_filename);
+                        Log.i("id",fid);
                         tv1.setText(head);
                         tv2.setText(body);
+                        //tv3.setText(issue);
+
+                        JSONObject jsonobj2 = jsonObject.getJSONObject("user");
+                        String name = jsonobj2.getString("name");
+                        tv3.setText(name);
+                        Log.i("Name",name);
+
+                    download.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String download_url = url+"/"+"announcements_donwload"+"/"+"download"+"/"+fid+"/"+file_name;
+                            Log.i("download_url",download_url);
+                            try {
+                                downurl = new URL(download_url);
+                                uri = Uri.parse(downurl.toURI().toString());
+                                DownloadManager.Request request1 = new DownloadManager.Request(uri);
+                                request1.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
+                                request1.setAllowedOverRoaming(false);
+                                request1.setTitle("Downloading " + file_name);
+                                request1.setDescription("Downloading " + original_filename);
+                                request1.setVisibleInDownloadsUi(true);
+                                request1.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "/vbuddy/"  + "/" + original_filename);
+                                long refid = downloadManager.enqueue(request1);
+
+                                // add the refid into an arraylist
+
+                                list.add(refid);
 
 
+                            } catch (MalformedURLException e) {
+                                e.printStackTrace();
+                            } catch (URISyntaxException e) {
+                                e.printStackTrace();
+                            }
+
+
+                        }
+                    });
 
 
                 } catch (JSONException e) {
@@ -84,4 +158,55 @@ public class Announcement_display_desc extends AppCompatActivity {
         });
         requestQueue.add(request);
     }
+    BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // get the refid from the download manager
+            long referenceId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
+
+            // remove it from our list
+            list.remove(referenceId);
+
+            // if list is empty means all downloads completed
+
+            if (list.isEmpty())
+
+            {
+
+
+
+// show a notification
+
+                Log.e("INSIDE", "" + referenceId);
+
+
+               NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(getBaseContext(),"M_CH_ID")
+
+                                .setSmallIcon(R.mipmap.ic_launcher)
+
+                                .setContentTitle("Vbuddy")
+
+                                .setContentText("All Download completed");
+
+
+
+
+
+                NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+                notificationManager.notify(1, notificationBuilder.build());
+
+
+
+
+
+            }
+
+
+
+
+        }
+    };
+
+
 }
