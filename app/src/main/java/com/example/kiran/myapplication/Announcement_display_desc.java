@@ -1,16 +1,12 @@
 package com.example.kiran.myapplication;
 
 import android.app.DownloadManager;
-import android.app.NotificationManager;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
-import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -143,6 +139,7 @@ public class Announcement_display_desc extends AppCompatActivity {
                                     list.add(refid);
 
 
+
                                 } catch (MalformedURLException e) {
                                     e.printStackTrace();
                                 } catch (URISyntaxException e) {
@@ -169,55 +166,7 @@ public class Announcement_display_desc extends AppCompatActivity {
         });
         requestQueue.add(request);
     }
-    BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            // get the refid from the download manager
-            long referenceId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
 
-            // remove it from our list
-            list.remove(referenceId);
-
-            // if list is empty means all downloads completed
-
-            if (list.isEmpty())
-
-            {
-
-
-
-// show a notification
-
-                Log.e("INSIDE", "" + referenceId);
-
-
-               NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(getBaseContext(),"M_CH_ID")
-
-                                .setSmallIcon(R.mipmap.ic_launcher)
-
-                                .setContentTitle("Vbuddy")
-
-                                .setContentText("All Download completed");
-
-
-
-
-
-                NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
-                notificationManager.notify(1, notificationBuilder.build());
-
-
-
-
-
-            }
-
-
-
-
-        }
-    };
 
 
 }

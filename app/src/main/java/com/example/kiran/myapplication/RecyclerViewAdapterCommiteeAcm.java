@@ -48,12 +48,16 @@ public class RecyclerViewAdapterCommiteeAcm extends RecyclerView.Adapter<Recycle
                 String price = listItem.getPrice().toString();
                 String contact = listItem.getContact().toString();
                 String id = listItem.getId().toString();
+                String filename = listItem.getFilename().toString();
+                String origfilename = listItem.getOrigfilename().toString();
                 Bundle bacm = new Bundle();
                 bacm.putString("1",head);
                 bacm.putString("2",body);
                 bacm.putString("3",price);
                 bacm.putString("4",contact);
                 bacm.putString("5",id);
+                bacm.putString("6",filename);
+                bacm.putString("7",origfilename);
                 i.putExtras(bacm);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);

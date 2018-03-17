@@ -46,10 +46,14 @@ public class RecyclerViewAdapterPlacement extends RecyclerView.Adapter<RecyclerV
                 String head = listItem.getHead().toString();
                 String body = listItem.getBody().toString();
                 String id = listItem.getId().toString();
+                String filename = listItem.getFilename().toString();
+                String originalfilename = listItem.getOriginalfilename().toString();
                 Bundle bplace = new Bundle();
                 bplace.putString("1",head);
                 bplace.putString("2",body);
                 bplace.putString("3",id);
+                bplace.putString("4",filename);
+                bplace.putString("5",originalfilename);
                 i.putExtras(bplace);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);

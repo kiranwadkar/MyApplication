@@ -1,8 +1,11 @@
 package com.example.kiran.myapplication;
 
+import android.app.DownloadManager;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -21,12 +24,23 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ArrayList;
+
 public class Commitee_acm_registerevent extends AppCompatActivity {
     TextView tv1,tv2,tv3,tv4,tv5;
-    Button register;
+    Button register,attachments;
     String reg_server_url;
     RequestQueue requestQueue;
     String url;
+    String filenm,origfilenm,idevent;
+    DownloadManager downloadManager;
+    Uri uri;
+    URL downurl;
+    ArrayList<Long> list = new ArrayList<>();
+    long refid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +52,8 @@ public class Commitee_acm_registerevent extends AppCompatActivity {
         tv4 = (TextView) findViewById(R.id.tvcontact);
         tv5 = (TextView)findViewById(R.id.tvid);
         register = (Button)findViewById(R.id.register);
+        attachments = (Button)findViewById(R.id.attachment);
+        downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 
         Bundle bb = getIntent().getExtras();
         String s1= bb.getString("1");
@@ -51,7 +67,10 @@ public class Commitee_acm_registerevent extends AppCompatActivity {
         String body = bacm.getString("2");
         String price = bacm.getString("3");
         String contact = bacm.getString("4");
-        final String idevent = bacm.getString("5");
+        idevent = bacm.getString("5");
+        filenm = bacm.getString("6");
+        origfilenm = bacm.getString("7");
+
 
 
 
@@ -80,6 +99,50 @@ public class Commitee_acm_registerevent extends AppCompatActivity {
 
             }
         });
+
+        attachments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                download_attachments();
+            }
+        });
+    }
+
+    private void download_attachments() {
+        String []items = filenm.split(",");
+        int noofitems = items.length;
+        String []ogfilenm = origfilenm.split(",");
+
+        for(int i=0;i<noofitems;i++){
+            // String []ogfilenm = original_filename.split(",");
+            String download_url = url+"/"+"events_donwload"+"/"+"download"+"/"+idevent+"/"+items[i];
+            Log.i("download_url",download_url);
+            try {
+                downurl = new URL(download_url);
+                uri = Uri.parse(downurl.toURI().toString());
+                DownloadManager.Request request1 = new DownloadManager.Request(uri);
+                request1.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
+                request1.setAllowedOverRoaming(false);
+                request1.setTitle("Downloading " + items);
+                request1.setDescription("Downloading " +ogfilenm[i]);
+                request1.setVisibleInDownloadsUi(true);
+                request1.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "/vbuddy/" +"/event/" +"/" + ogfilenm[i]);
+
+                long refid = downloadManager.enqueue(request1);
+
+                // add the refid into an arraylist
+
+                list.add(refid);
+
+
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 
     private void parsecode() {

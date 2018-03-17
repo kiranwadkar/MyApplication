@@ -72,12 +72,17 @@ public class Commitee_acm extends AppCompatActivity {
                         Log.i("id",id1);
                         String contact_name = o1.getString("contact_name");
 
+                        String file_name = o1.getString("file_name");
+                        String orig_filename = o1.getString("original_filename");
+
                         Log.i("Head22",head);
                         Log.i("Body22",body);
+                        Log.i("file_name",file_name);
+                        Log.i("orig_filename",orig_filename);
 
 
 
-                        List_items_commitee_acm item =new List_items_commitee_acm(head,body,price,contact_name,id1);
+                        List_items_commitee_acm item =new List_items_commitee_acm(head,body,price,contact_name,id1,file_name,orig_filename);
                         listItems.add(item);
 
                     }

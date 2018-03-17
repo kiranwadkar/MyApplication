@@ -78,9 +78,13 @@ public class Placement extends AppCompatActivity {
                         String id1 = String.valueOf(id);
                         Log.i("id",id1);
 
+                        String file_name = a1.getString("file_name");
+                        String original_filename = a1.getString("original_filename");
+                        Log.i("Filename",file_name);
+                        Log.i("Originalfilename",original_filename);
 
 
-                        List_items_placement item =new List_items_placement(head,body,id1);
+                        List_items_placement item =new List_items_placement(head,body,id1,file_name,original_filename);
                         listItems.add(item);
                         //tv1.append(head+"\n" +body+"\n");
 
