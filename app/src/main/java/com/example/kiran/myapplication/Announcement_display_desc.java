@@ -116,30 +116,41 @@ public class Announcement_display_desc extends AppCompatActivity {
                     download.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            String download_url = url+"/"+"announcements_donwload"+"/"+"download"+"/"+fid+"/"+file_name;
-                            Log.i("download_url",download_url);
-                            try {
-                                downurl = new URL(download_url);
-                                uri = Uri.parse(downurl.toURI().toString());
-                                DownloadManager.Request request1 = new DownloadManager.Request(uri);
-                                request1.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
-                                request1.setAllowedOverRoaming(false);
-                                request1.setTitle("Downloading " + file_name);
-                                request1.setDescription("Downloading " + original_filename);
-                                request1.setVisibleInDownloadsUi(true);
-                                request1.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "/vbuddy/"  + "/" + original_filename);
-                                long refid = downloadManager.enqueue(request1);
+                            //comma ne separate karaychay file la
+                            String []items = file_name.split(",");
+                            int noofitems = items.length;
+                           String []ogfilenm = original_filename.split(",");
 
-                                // add the refid into an arraylist
+                            for(int i=0;i<noofitems;i++){
+                               // String []ogfilenm = original_filename.split(",");
+                                String download_url = url+"/"+"announcements_donwload"+"/"+"download"+"/"+fid+"/"+items[i];
+                                Log.i("download_url",download_url);
+                                try {
+                                    downurl = new URL(download_url);
+                                    uri = Uri.parse(downurl.toURI().toString());
+                                    DownloadManager.Request request1 = new DownloadManager.Request(uri);
+                                    request1.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
+                                    request1.setAllowedOverRoaming(false);
+                                    request1.setTitle("Downloading " + items);
+                                    request1.setDescription("Downloading " +ogfilenm[i]);
+                                    request1.setVisibleInDownloadsUi(true);
+                                    request1.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "/vbuddy/" + "/" + ogfilenm[i]);
 
-                                list.add(refid);
+                                    long refid = downloadManager.enqueue(request1);
+
+                                    // add the refid into an arraylist
+
+                                    list.add(refid);
 
 
-                            } catch (MalformedURLException e) {
-                                e.printStackTrace();
-                            } catch (URISyntaxException e) {
-                                e.printStackTrace();
+                                } catch (MalformedURLException e) {
+                                    e.printStackTrace();
+                                } catch (URISyntaxException e) {
+                                    e.printStackTrace();
+                                }
+
                             }
+
 
 
                         }
