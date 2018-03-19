@@ -10,13 +10,17 @@ public class List_items_commitee_other {
     private String price;
     private String contact;
     private String id;
+    private String filename;
+    private String origfilename;
 
-    public List_items_commitee_other(String head,String body,String price,String contact,String id) {
+    public List_items_commitee_other(String head,String body,String price,String contact,String id,String filename,String origfilenm) {
         this.head = head;
         this.body = body;
         this.price = price;
         this.contact = contact;
         this.id = id;
+        this.filename =filename;
+        this.origfilename = origfilenm;
     }
 
     public String getHead() {
@@ -37,6 +41,14 @@ public class List_items_commitee_other {
 
     public String getId() {
         return id;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public String getOrigfilename() {
+        return origfilename;
     }
 }
 

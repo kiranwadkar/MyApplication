@@ -46,12 +46,16 @@ public class RecyclerViewAdapterCommiteeOther extends RecyclerView.Adapter<Recyc
                 String price = listItem.getPrice().toString();
                 String contact = listItem.getContact().toString();
                 String id = listItem.getId().toString();
+                String filename = listItem.getFilename().toString();
+                String origfilename = listItem.getOrigfilename().toString();
                 Bundle bother = new Bundle();
                 bother.putString("1",head);
                 bother.putString("2",body);
                 bother.putString("3",price);
                 bother.putString("4",contact);
                 bother.putString("5",id);
+                bother.putString("6",filename);
+                bother.putString("7",origfilename);
                 i.putExtras(bother);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);

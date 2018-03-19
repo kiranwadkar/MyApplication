@@ -47,12 +47,16 @@ public class RecyclerViewAdapterCommiteeIeee extends RecyclerView.Adapter<Recycl
                 String price = listItem.getPrice().toString();
                 String contact = listItem.getContact().toString();
                 String id = listItem.getId().toString();
+                String filename = listItem.getFilename().toString();
+                String origfilename = listItem.getOrigfilename().toString();
                 Bundle bb = new Bundle();
                 bb.putString("1",head);
                 bb.putString("2",body);
                 bb.putString("3",price);
                 bb.putString("4",contact);
                 bb.putString("5",id);
+                bb.putString("6",filename);
+                bb.putString("7",origfilename);
                 i.putExtras(bb);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
