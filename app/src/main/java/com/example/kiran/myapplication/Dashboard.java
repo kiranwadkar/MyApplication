@@ -1,10 +1,15 @@
 package com.example.kiran.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 //import static android.os.Build.ID;
 public class Dashboard extends AppCompatActivity {
@@ -12,6 +17,33 @@ public class Dashboard extends AppCompatActivity {
    // ImageView holidays,event,announcement,placement,ia,timetable,feedback;
 
     CardView cardtt,cardevent,cardia,cardplacement,cardholiday,cardannouncement,cardfeedback;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menulogout:
+                SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editor = m.edit();
+                editor.clear();
+                editor.commit();
+                finish();
+                Intent i100 = new Intent(getBaseContext(),MainActivity.class);
+                startActivity(i100);
+                break;
+
+            case R.id.menusettings:
+                Toast.makeText(getBaseContext(),"Settings is selected",Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +56,8 @@ public class Dashboard extends AppCompatActivity {
         cardholiday = (CardView)findViewById(R.id.cardviewholiday);
         cardannouncement =(CardView)findViewById(R.id.cardviewannouncement);
         cardfeedback = (CardView)findViewById(R.id.cardviewfeedback);
+
+
 
         cardtt.setOnClickListener(new View.OnClickListener() {
             @Override

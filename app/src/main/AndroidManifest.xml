@@ -15,13 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".Dashboard" />
         <activity android:name=".Commitees" />
         <activity android:name=".Holidays" />
@@ -37,7 +38,8 @@
         <activity android:name=".Commitee_other_registerevent" />
         <activity android:name=".Commitee_ieee" />
         <activity android:name=".Commitee_ieee_registerevent" />
-        <activity android:name=".Announcement_display_desc"></activity>
+        <activity android:name=".Announcement_display_desc" />
+
     </application>
 
 </manifest>
