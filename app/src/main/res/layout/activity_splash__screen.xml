@@ -4,23 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#37474f"
     tools:context="com.example.kiran.myapplication.Splash_Screen">
+
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:id="@+id/iv1"
-
-        android:src="@drawable/ic_vbuddy"
+        android:src="@drawable/logo_splash"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/iv1"
-        android:layout_marginTop="25dp"
-        android:textSize="12dp"
-        android:textColor="#454545"
+        android:layout_marginTop="20dp"
+        android:textSize="14dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
         android:gravity="center_horizontal"
         android:layout_centerInParent="true"
         android:text="Vbuddy"/>

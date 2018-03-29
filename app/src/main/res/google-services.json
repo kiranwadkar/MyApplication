@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1024817701038",
+    "firebase_url": "https://vbuddy-1de7a.firebaseio.com",
+    "project_id": "vbuddy-1de7a",
+    "storage_bucket": "vbuddy-1de7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024817701038:android:bc6a7e3ca808adbe",
+        "android_client_info": {
+          "package_name": "com.example.kiran.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1024817701038-de3gtnodsun98320p51i6jafn2cmqp53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0FAKfH5USMk0UP4hHwAd29ACqCZ3TgFA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

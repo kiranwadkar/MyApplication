@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
     Button login;
     RequestQueue requestQueue;
     //String server_url="http://192.168.0.102:80/api/login";
-    String server_url="http://192.168.0.103:80/api";
+    String server_url="http://192.168.1.14:80/api";
     String  semail;
     String spassword;
-
+    String token;
 
 
     @Override
@@ -73,7 +74,9 @@ public class MainActivity extends AppCompatActivity {
                     if(isValidPassword(spassword)){
                        // semail = email.getText().toString();
                         //spassword = password.getText().toString();
-                        validate();//change kelay
+                        validate();
+
+                        //change kelay
                         // Toast.makeText(getBaseContext(),"valid",Toast.LENGTH_SHORT).show();
 
                     }
@@ -90,9 +93,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+
             private void validate() {
-            // String   final_server_url =server_url+ "/"+semail+"/"+spassword;
-                String   final_server_url =server_url+"/"+"login"+ "/"+semail+"/"+spassword;
+
+                token = FirebaseInstanceId.getInstance().getToken();
+                //get the token
+                Log.d("token",token);
+                String   final_server_url =server_url+"/"+"login"+ "/"+semail+"/"+spassword+"/"+token;
                 Log.i("Server_url","Full url "+final_server_url);
 
                 final JsonObjectRequest jsonObject = new JsonObjectRequest(Request.Method.GET,final_server_url,null, new Response.Listener<JSONObject>() {
@@ -129,6 +136,8 @@ public class MainActivity extends AppCompatActivity {
                                 String id1 = String.valueOf(id);
 
 
+                                //Toast.makeText(getBaseContext(),token,Toast.LENGTH_SHORT).show();
+
                                 SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
                                 SharedPreferences.Editor editor = m.edit();
                                 editor.putString("Name",name);
@@ -139,7 +148,11 @@ public class MainActivity extends AppCompatActivity {
                                 editor.putString("Division",division);
                                 editor.putString("Id",id1);
                                 editor.putString("Sem",sem1);
+                                editor.putString("Token",token);
                                 editor.commit();
+
+
+
 
                                 Intent i1= new Intent(getBaseContext(),Dashboard.class);
                                 startActivity(i1);
@@ -157,12 +170,14 @@ public class MainActivity extends AppCompatActivity {
                         }
                         catch (JSONException e) {
                             e.printStackTrace();
+
                         }
                     }
                 }, new Response.ErrorListener() {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        Log.i("Error", String.valueOf(error));
                         Toast.makeText(getBaseContext(),"Error",Toast.LENGTH_SHORT).show();
                         error.printStackTrace();
                     }
@@ -173,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             private boolean isValidPassword(String pass) {
-                if (pass != null && pass.length() > 5) {
+                if (pass != null) {
                     return true;
                 }
                 return false;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#a9ebf7"
+    android:background="#ffffff"
     android:orientation="vertical"
     tools:context="com.example.kiran.myapplication.Dashboard" >
     <ScrollView
@@ -22,7 +22,7 @@
                 android:clipToPadding="false">
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
                     android:id="@+id/cardtimetable"
@@ -55,7 +55,7 @@
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
                     android:id="@+id/cardviewevent">
@@ -99,7 +99,7 @@
                 android:clipToPadding="false">
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
                     android:id="@+id/cardviewia">
@@ -133,7 +133,7 @@
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
                     android:id="@+id/cardviewfeedback">
@@ -172,7 +172,7 @@
                 android:clipToPadding="false">
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
                     android:id="@+id/cardviewplacement">
@@ -203,7 +203,7 @@
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
                     android:id="@+id/cardviewholiday">
@@ -242,7 +242,7 @@
                 android:clipToPadding="false">
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
                     android:id="@+id/cardviewannouncement">
