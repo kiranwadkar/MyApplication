@@ -1,79 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.kiran.myapplication.Commitee_other_registerevent">
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:id="@+id/tvhead"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="sample head"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.kiran.myapplication.Commitee_other_registerevent">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:id="@+id/tvhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sample head"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
 
-    <TextView
-        android:id="@+id/tvbody"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="sample body descroption "
-        android:layout_marginTop="10dp"
-        android:textSize="15dp"
-        android:padding="10dp"
-        />
+        <TextView
+            android:id="@+id/tvbody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sample body descroption "
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:padding="10dp"
+            />
 
 
-    <TextView
-        android:id="@+id/tvprice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="sample body descroption "
-        android:layout_marginTop="10dp"
-        android:textSize="15dp"
-        android:padding="10dp"
-        />
+        <TextView
+            android:id="@+id/tvprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sample body descroption "
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:padding="10dp"
+            />
 
-    <TextView
-        android:id="@+id/tvcontact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="sample body descroption "
-        android:layout_marginTop="10dp"
-        android:textSize="15dp"
-        android:padding="10dp"
-        />
+        <TextView
+            android:id="@+id/tvcontact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sample body descroption "
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:padding="10dp"
+            />
 
-    <TextView
-        android:id="@+id/tvid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="sample body descroption "
-        android:layout_marginTop="10dp"
-        android:textSize="15dp"
-        android:padding="10dp"
-        />
+        <TextView
+            android:id="@+id/tvid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sample body descroption "
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:padding="10dp"
+            />
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textColor="#ff22ff"
-        android:text="Register"
-        android:layout_marginTop="30dp"/>
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:text="Register"
+            android:background="@color/colorAccent2"
+            android:layout_marginTop="30dp"/>
 
-    <Button
-        android:id="@+id/attachment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Attachments"
-        android:layout_gravity="center_horizontal"
-        />
+        <Button
+            android:id="@+id/attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attachments"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:background="@color/colorPrimary2"
+            android:layout_gravity="center_horizontal"
+            />
 
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#37474f"
+    android:background="@drawable/background_color"
     tools:context="com.example.kiran.myapplication.Splash_Screen">
 
 

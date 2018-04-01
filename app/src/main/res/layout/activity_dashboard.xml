@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
     android:orientation="vertical"
     tools:context="com.example.kiran.myapplication.Dashboard" >
     <ScrollView
@@ -13,7 +12,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="#fbe9e7">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -26,14 +26,15 @@
                     android:clickable="true"
                     android:layout_margin="10dp"
                     android:id="@+id/cardtimetable"
-
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#222760">
+                        android:background="#ffffff">
                         <ImageView
                             android:id="@+id/timetable"
                             android:layout_width="64dp"
@@ -48,7 +49,7 @@
                             android:text="Timetable"
                             android:textAlignment="center"
                             android:layout_marginTop="10dp"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent"
                             android:textSize="15dp"
                             android:textStyle="bold"/>
                     </LinearLayout>
@@ -58,7 +59,9 @@
                     android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
-                    android:id="@+id/cardviewevent">
+                    android:id="@+id/cardviewevent"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
 
 
                     <LinearLayout
@@ -66,7 +69,7 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#222760"
+                        android:background="#ffffff"
                         >
 
                         <ImageView
@@ -82,7 +85,7 @@
                             android:layout_height="wrap_content"
                             android:text="Event Enrollment"
                             android:textAlignment="center"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent"
                             android:textSize="15dp"
                             android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
@@ -102,13 +105,15 @@
                     android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
-                    android:id="@+id/cardviewia">
+                    android:id="@+id/cardviewia"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#222760"
+                        android:background="#ffffff"
                         >
                         <ImageView
                             android:id="@+id/ia"
@@ -123,7 +128,7 @@
                             android:layout_height="wrap_content"
                             android:text="IA Timetable"
                             android:textAlignment="center"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent"
                             android:textSize="15dp"
                             android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
@@ -136,13 +141,15 @@
                     android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
-                    android:id="@+id/cardviewfeedback">
+                    android:id="@+id/cardviewfeedback"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#222760">
+                        android:background="#ffffff">
                         <ImageView
                             android:id="@+id/feedback"
                             android:layout_width="64dp"
@@ -156,7 +163,7 @@
                             android:layout_height="wrap_content"
                             android:text="Feedback Form"
                             android:textAlignment="center"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent"
                             android:textSize="15dp"
                             android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
@@ -175,13 +182,15 @@
                     android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
-                    android:id="@+id/cardviewplacement">
+                    android:id="@+id/cardviewplacement"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#222760">
+                        android:background="#ffffff">
                         <ImageView
                             android:id="@+id/placement"
                             android:layout_width="64dp"
@@ -194,7 +203,7 @@
                             android:layout_height="wrap_content"
                             android:text="Placement Updates"
                             android:textAlignment="center"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent"
                             android:textSize="15dp"
                             android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
@@ -206,13 +215,15 @@
                     android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
-                    android:id="@+id/cardviewholiday">
+                    android:id="@+id/cardviewholiday"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#222760">
+                        android:background="#ffffff">
                         <ImageView
                             android:id="@+id/holidays"
                             android:layout_width="64dp"
@@ -226,7 +237,7 @@
                             android:layout_height="wrap_content"
                             android:text="Holidays"
                             android:textAlignment="center"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent"
                             android:textSize="15dp"
                             android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
@@ -245,13 +256,15 @@
                     android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
-                    android:id="@+id/cardviewannouncement">
+                    android:id="@+id/cardviewannouncement"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#222760">
+                        android:background="#ffffff">
                         <ImageView
                             android:id="@+id/annoucements"
                             android:layout_width="64dp"
@@ -265,7 +278,7 @@
                             android:layout_height="wrap_content"
                             android:text="Announcements"
                             android:textAlignment="center"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent"
                             android:textSize="15dp"
                             android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
@@ -278,317 +291,6 @@
 
     </ScrollView>
 
-<!--
 
-
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:background="#17202A"
-            android:columnOrderPreserved="false"
-            android:padding="14dp"
-            android:rowCount="3"
-            >
-
-
-
-            <android.support.v7.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="18dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/timetable"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/icon_timetable" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Timetable"
-                        android:textAlignment="center"
-                        android:layout_marginTop="20dp"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp"
-                        android:textStyle="bold"/>
-
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-
-            <android.support.v7.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/event"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/icon_event" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Event Enrollment"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp"
-                        android:layout_marginTop="20dp"
-                        android:textStyle="bold"/>
-
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-
-
-            <android.support.v7.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ia"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/icon_ia" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="IA Timetable"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp"
-                        android:layout_marginTop="20dp"
-                        android:textStyle="bold"/>
-
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-
-            <android.support.v7.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/feedback"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/icon_feedback" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Feedback Form"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp"
-                        android:layout_marginTop="20dp"
-                        android:textStyle="bold"/>
-
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-
-            <android.support.v7.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/placement"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/icon_placement" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Placement Updates"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp"
-                        android:layout_marginTop="20dp"
-                        android:textStyle="bold"/>
-
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-
-            <android.support.v7.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/holidays"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/icon_holiday" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Holidays"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp"
-                        android:layout_marginTop="20dp"
-                        android:textStyle="bold"/>
-
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_rowWeight="1"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/annoucements"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/icon_announcement" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Announcements"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="15dp"
-                        android:layout_marginTop="20dp"
-                        android:textStyle="bold"/>
-
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-       </GridLayout>
--->
  </LinearLayout>
 

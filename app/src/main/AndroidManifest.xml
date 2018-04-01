@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splash_Screen">
+        <activity android:name=".Splash_Screen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,21 +25,45 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Dashboard" />
-        <activity android:name=".Commitees" />
-        <activity android:name=".Holidays" />
-        <activity android:name=".Announcements" />
-        <activity android:name=".Commitee_acm" />
-        <activity android:name=".Placement" />
-        <activity android:name=".Placement_display_desc" />
-        <activity android:name=".Commitee_acm_registerevent" />
-        <activity android:name=".IA_timetable" />
-        <activity android:name=".Timetable" />
-        <activity android:name=".Feedback" />
-        <activity android:name=".Commitee_other" />
-        <activity android:name=".Commitee_other_registerevent" />
-        <activity android:name=".Commitee_ieee" />
-        <activity android:name=".Commitee_ieee_registerevent" />
-        <activity android:name=".Announcement_display_desc" />
+        <activity android:name=".Commitees"
+            android:label="Commitees"
+            android:theme="@style/AppTheme2"
+            />
+        <activity android:name=".Holidays"
+            android:label="Holidays"/>
+        <activity android:name=".Announcements"
+            android:label="Announcements"/>
+        <activity android:name=".Commitee_acm"
+            android:label="ACM"
+            android:theme="@style/AppTheme2"/>
+        <activity android:name=".Placement"
+            android:label="Placements"/>
+        <activity android:name=".Placement_display_desc"
+            android:label="Placement"/>
+        <activity android:name=".Commitee_acm_registerevent"
+            android:theme="@style/AppTheme2"
+            android:label="Event"/>
+        <activity android:name=".IA_timetable"
+            android:label="IA Timetable"/>
+        <activity android:name=".Timetable"
+            android:label="Timetable"/>
+        <activity android:name=".Feedback"
+            android:label="Feedback"/>
+        <activity android:name=".Commitee_other"
+            android:label="Other"
+            android:theme="@style/AppTheme2"/>
+        <activity android:name=".Commitee_other_registerevent"
+            android:theme="@style/AppTheme2"
+            android:label="Event"/>
+        <activity android:name=".Commitee_ieee"
+            android:label="IEEE"
+            android:theme="@style/AppTheme2"
+            />
+        <activity android:name=".Commitee_ieee_registerevent"
+            android:theme="@style/AppTheme2"
+            android:label="Event"/>
+        <activity android:name=".Announcement_display_desc"
+            android:label="Announcement"/>
 
         <service android:name=".MyFirebaseInstanceIDService">
             <intent-filter>
@@ -51,7 +76,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".User_profile"></activity>
+        <activity android:name=".User_profile"
+            android:label="Profile"></activity>
     </application>
 
 </manifest>

@@ -1,45 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.kiran.myapplication.Announcement_display_desc">
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:id="@+id/tvhead"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="sample head"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.kiran.myapplication.Announcement_display_desc">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:id="@+id/tvhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
 
-    <TextView
-        android:id="@+id/tvbody"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="sample body descroption "
-        android:layout_marginTop="10dp"
-        android:textSize="15dp"
-        android:padding="10dp"
-        />
+        <TextView
+            android:id="@+id/tvbody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:padding="10dp"
+            />
 
-    <TextView
-        android:id="@+id/tvissue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="15dp"
-        android:padding="10dp"
-        />
+        <TextView
+            android:id="@+id/tvissue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:padding="10dp"
+            />
 
-    <Button
-        android:id="@+id/download"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Download"/>
-</LinearLayout>
+        <Button
+            android:id="@+id/download"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Attachments"
+            android:padding="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</ScrollView>
+

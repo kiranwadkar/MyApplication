@@ -39,8 +39,8 @@ public class RecyclerViewAdapter_IA extends RecyclerView.Adapter<RecyclerViewAda
         List_items_ia_tt listItem = listItems.get(position);
         holder.tv1.setText(listItem.getSubject());
         holder.tv2.setText(listItem.getDate());
-        holder.tv3.setText(listItem.getStart_time());
-        holder.tv4.setText(listItem.getEnd_time());
+        holder.tv3.setText(listItem.getStart_time()+"-"+listItem.getEnd_time());
+        //holder.tv4.setText(listItem.getEnd_time());
     }
 
     @Override
@@ -52,14 +52,14 @@ public class RecyclerViewAdapter_IA extends RecyclerView.Adapter<RecyclerViewAda
         TextView tv1;
         TextView tv2;
         TextView tv3;
-        TextView tv4;
+        //TextView tv4;
 
         public ViewHolder(View itemView) {
             super(itemView);
             tv1 = (TextView)itemView.findViewById(R.id.textView2);
             tv2 = (TextView)itemView.findViewById(R.id.textView4);
             tv3 = (TextView)itemView.findViewById(R.id.textView6);
-            tv4 = (TextView)itemView.findViewById(R.id.textView8);
+           // tv4 = (TextView)itemView.findViewById(R.id.textView8);
 
         }
     }

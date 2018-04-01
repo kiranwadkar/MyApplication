@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffffff"
     tools:context="com.example.kiran.myapplication.Commitees">
 
     <ScrollView
@@ -14,7 +13,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="#fff8e1">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -23,17 +23,19 @@
                 android:clipToPadding="false">
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
                     android:id="@+id/cardacm"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#00838f">
+                        android:background="#ffffff">
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
@@ -47,7 +49,7 @@
                             android:text="ACM"
                             android:textAlignment="center"
                             android:layout_marginTop="20dp"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent2"
                             android:textSize="18dp"
                             android:textStyle="bold"/>
 
@@ -56,10 +58,12 @@
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
                     android:id="@+id/cardcsi"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
                     >
 
 
@@ -68,7 +72,7 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#00838f">
+                        android:background="#ffffff">
 
                         <ImageView
                             android:layout_width="100dp"
@@ -83,7 +87,7 @@
                             android:text="CSI"
                             android:textAlignment="center"
                             android:layout_marginTop="20dp"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent2"
                             android:textSize="18dp"
                             android:textStyle="bold"/>
 
@@ -99,16 +103,18 @@
                 android:clipToPadding="false">
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
-                    android:id="@+id/carditsa">
+                    android:id="@+id/carditsa"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#00838f">
+                        android:background="#ffffff">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
@@ -121,7 +127,7 @@
                             android:text="ITSA"
                             android:textAlignment="center"
                             android:layout_marginTop="20dp"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent2"
                             android:textSize="18dp"
                             android:textStyle="bold"/>
 
@@ -130,16 +136,18 @@
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
-                    android:id="@+id/cardieee">
+                    android:id="@+id/cardieee"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#00838f">
+                        android:background="#ffffff">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
@@ -152,7 +160,7 @@
                             android:text="IEEE"
                             android:textAlignment="center"
                             android:layout_marginTop="20dp"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent2"
                             android:textSize="18dp"
                             android:textStyle="bold"/>
                     </LinearLayout>
@@ -167,16 +175,18 @@
                 android:clipToPadding="false">
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
-                    android:id="@+id/cardiete">
+                    android:id="@+id/cardiete"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#00838f">
+                        android:background="#ffffff">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
@@ -190,7 +200,7 @@
                             android:text="IETE"
                             android:textAlignment="center"
                             android:layout_marginTop="20dp"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent2"
                             android:textSize="18dp"
                             android:textStyle="bold"/>
                     </LinearLayout>
@@ -198,18 +208,20 @@
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
                     app:cardBackgroundColor="@color/colorPrimary"
                     android:id="@+id/cardeesa"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#00838f">
+                        android:background="#ffffff">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
@@ -222,7 +234,7 @@
                             android:text="EESA"
                             android:textAlignment="center"
                             android:layout_marginTop="20dp"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent2"
                             android:textSize="18dp"
                             android:textStyle="bold"/>
                     </LinearLayout>
@@ -237,16 +249,18 @@
                 android:clipToPadding="false">
                 <android.support.v7.widget.CardView
                     android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_height="160dp"
                     android:clickable="true"
                     android:layout_margin="10dp"
-                    android:id="@+id/cardother">
+                    android:id="@+id/cardother"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:background="#00838f">
+                        android:background="#ffffff">
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
@@ -259,7 +273,7 @@
                             android:text="OTHER"
                             android:textAlignment="center"
                             android:layout_marginTop="20dp"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/colorAccent2"
                             android:textSize="18dp"
                             android:textStyle="bold"/>
                     </LinearLayout>

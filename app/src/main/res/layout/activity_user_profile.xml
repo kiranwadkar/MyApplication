@@ -4,76 +4,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.example.kiran.myapplication.User_profile">
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        >
+
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|center_vertical"
         android:padding="10dp"
         >
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/profile_pic"/>
         <TableRow
             android:layout_marginTop="20dp">
             <TextView
                 android:text="Roll Number:"
-                android:textSize="15dp"
-                android:textStyle="bold"/>
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
             <TextView
-                android:id="@+id/rollno"/>
+                android:id="@+id/rollno"
+                android:gravity="center"
+                android:textSize="20dp"/>
         </TableRow>
         <TableRow
             android:layout_marginTop="10dp"
             >
             <TextView
                 android:text="Name:"
-                android:textSize="15dp"
+                android:textSize="20dp"
                 android:textStyle="bold"/>
             <TextView
-                android:id="@+id/name"/>
+                android:id="@+id/name"
+                android:textSize="20dp"
+                android:gravity="center"/>
         </TableRow>
         <TableRow
             android:layout_marginTop="10dp">
             <TextView
                 android:text="Email:"
-                android:textSize="15dp"
+                android:textSize="20dp"
                 android:textStyle="bold"/>
             <TextView
-                android:id="@+id/email"/>
+                android:id="@+id/email"
+                android:textSize="20dp"
+                android:gravity="center"/>
         </TableRow>
         <TableRow
             android:layout_marginTop="10dp">
             <TextView
                 android:text="Year:"
-                android:textSize="15dp"
+                android:textSize="20dp"
                 android:textStyle="bold"/>
             <TextView
-                android:id="@+id/year"/>
+                android:id="@+id/year"
+                android:textSize="20dp"
+                android:gravity="center"/>
         </TableRow>
         <TableRow
             android:layout_marginTop="10dp">
             <TextView
                 android:text="Branch:"
-                android:textSize="15dp"
+                android:textSize="20dp"
                 android:textStyle="bold"/>
             <TextView
-                android:id="@+id/branch"/>
+                android:id="@+id/branch"
+                android:textSize="20dp"
+                android:gravity="center"/>
         </TableRow>
         <TableRow
             android:layout_marginTop="10dp">
             <TextView
                 android:text="Division:"
-                android:textSize="15dp"
+                android:textSize="20dp"
                 android:textStyle="bold"/>
             <TextView
-                android:id="@+id/division"/>
+                android:id="@+id/division"
+                android:textSize="20dp"
+                android:gravity="center"/>
         </TableRow>
         <TableRow
             android:layout_marginTop="10dp">
             <TextView
                 android:text="Semester:"
-                android:textSize="15dp"
-                android:textStyle="bold"/>
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
             <TextView
-                android:id="@+id/semester"/>
+                android:id="@+id/semester"
+                android:textSize="20dp"
+                android:gravity="center"/>
         </TableRow>
     </TableLayout>
+    </android.support.v7.widget.CardView>
 </LinearLayout>

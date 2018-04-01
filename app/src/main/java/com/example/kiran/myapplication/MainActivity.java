@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     Button login;
     RequestQueue requestQueue;
     //String server_url="http://192.168.0.102:80/api/login";
-    String server_url="http://192.168.1.14:80/api";
+    String server_url="http://192.168.43.44:80/api";
     String  semail;
     String spassword;
     String token;
@@ -99,7 +99,8 @@ public class MainActivity extends AppCompatActivity {
                 token = FirebaseInstanceId.getInstance().getToken();
                 //get the token
                 Log.d("token",token);
-                String   final_server_url =server_url+"/"+"login"+ "/"+semail+"/"+spassword+"/"+token;
+               String   final_server_url =server_url+"/"+"login"+ "/"+semail+"/"+spassword+"/"+token;
+               // String   final_server_url =server_url+"/"+"login"+ "/"+semail+"/"+spassword;
                 Log.i("Server_url","Full url "+final_server_url);
 
                 final JsonObjectRequest jsonObject = new JsonObjectRequest(Request.Method.GET,final_server_url,null, new Response.Listener<JSONObject>() {

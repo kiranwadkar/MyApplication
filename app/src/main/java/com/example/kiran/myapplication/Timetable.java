@@ -22,7 +22,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.text.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Timetable extends AppCompatActivity {
@@ -53,8 +53,7 @@ public class Timetable extends AppCompatActivity {
 
 
 
-
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+       SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
         Date d = new Date();
         String day = sdf.format(d);
 

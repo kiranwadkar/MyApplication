@@ -64,7 +64,7 @@ public class Announcement_display_desc extends AppCompatActivity {
 
 
         SharedPreferences m = PreferenceManager.getDefaultSharedPreferences(this);
-        //String name = m.getString("Name","");
+
          year = m.getString("Year","");
         branch =m.getString("Branch","");
          div = m.getString("Division","");

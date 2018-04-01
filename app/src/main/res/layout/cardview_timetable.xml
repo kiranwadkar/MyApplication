@@ -3,15 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
+    android:layout_height="wrap_content"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/cardview1"
         app:cardBackgroundColor="#FFFFFF"
-        android:padding="16dp"
-
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
         >
         <TableLayout
             android:padding="16dp"
@@ -19,7 +22,7 @@
             android:layout_height="wrap_content">
 
             <TableRow
-                android:background="#FFEA00"
+
                 android:layout_marginTop="5dp">
 
                 <TextView
@@ -40,7 +43,7 @@
             </TableRow>
 
             <TableRow
-                android:background="#8BC34A"
+
                 android:layout_marginTop="5dp">
 
                 <TextView
@@ -61,7 +64,7 @@
 
             </TableRow>
             <TableRow
-                android:background="#F44336"
+
                 android:layout_marginTop="5dp"
                 >
                 <TextView
@@ -82,7 +85,7 @@
             </TableRow>
 
             <TableRow
-                android:background="#FFC107"
+
                 android:layout_marginTop="5dp">
 
                 <TextView
@@ -104,7 +107,7 @@
 
 
             <TableRow
-                android:background="#03A9F4"
+
                 android:layout_marginTop="5dp">
 
                 <TextView
@@ -130,5 +133,5 @@
 
     </android.support.v7.widget.CardView>
 
-
+    </ScrollView>
 </LinearLayout>
