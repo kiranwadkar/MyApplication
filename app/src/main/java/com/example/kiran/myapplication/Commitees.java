@@ -9,7 +9,7 @@ import android.view.View;
 public class Commitees extends AppCompatActivity {
     //ImageView acm,csi,eesa,ieee,iete,itsa,other;
 
-    CardView cardacm,cardcsi,carditsa,cardieee,cardiete,cardessa,cardother;
+    CardView cardacm,cardcsi,carditsa,cardieee,cardiete,cardbmsa,cardother;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +20,7 @@ public class Commitees extends AppCompatActivity {
         carditsa = (CardView)findViewById(R.id.carditsa);
         cardieee = (CardView)findViewById(R.id.cardieee);
         cardiete = (CardView) findViewById(R.id.cardiete);
-        cardessa = (CardView)findViewById(R.id.cardeesa);
+        cardbmsa = (CardView)findViewById(R.id.cardbmsa);
         cardother = (CardView)findViewById(R.id.cardother);
 
         cardacm.setOnClickListener(new View.OnClickListener() {

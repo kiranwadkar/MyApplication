@@ -40,7 +40,7 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/ic_acm"
+                            android:src="@drawable/acm22"
                             android:id="@+id/acm"/>
 
                         <TextView
@@ -78,7 +78,7 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/ic_csi"
+                            android:src="@drawable/csi22"
                             android:id="@+id/csi"/>
 
                         <TextView
@@ -116,10 +116,10 @@
                         android:gravity="center"
                         android:background="#ffffff">
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/ic_itsa"
+                            android:src="@drawable/itsa22"
                             android:id="@+id/itsa"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -149,10 +149,10 @@
                         android:gravity="center"
                         android:background="#ffffff">
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/ic_ieee_1_"
+                            android:src="@drawable/ieee22"
                             android:id="@+id/ieee"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -188,10 +188,10 @@
                         android:gravity="center"
                         android:background="#ffffff">
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/ic_iete"
+                            android:src="@drawable/iete22"
                             android:id="@+id/iete"/>
 
                         <TextView
@@ -212,7 +212,7 @@
                     android:clickable="true"
                     android:layout_margin="10dp"
                     app:cardBackgroundColor="@color/colorPrimary"
-                    android:id="@+id/cardeesa"
+                    android:id="@+id/cardbmsa"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="8dp"
                     >
@@ -223,15 +223,15 @@
                         android:gravity="center"
                         android:background="#ffffff">
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/ic_eesa"
-                            android:id="@+id/eesa"/>
+                            android:src="@drawable/bmsa22"
+                            android:id="@+id/bmsa"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="EESA"
+                            android:text="BMSA"
                             android:textAlignment="center"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/colorAccent2"
@@ -262,10 +262,10 @@
                         android:gravity="center"
                         android:background="#ffffff">
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/other"
+                            android:src="@drawable/other22"
                             android:id="@+id/other"/>
                         <TextView
                             android:layout_width="wrap_content"

@@ -37,11 +37,11 @@
                         android:background="#ffffff">
                         <ImageView
                             android:id="@+id/timetable"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:padding="10dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/icon_timetable" />
+                            android:src="@drawable/timetable22" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -74,11 +74,11 @@
 
                         <ImageView
                             android:id="@+id/event"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:padding="10dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/icon_event" />
+                            android:src="@drawable/event22" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -117,11 +117,11 @@
                         >
                         <ImageView
                             android:id="@+id/ia"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:padding="10dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/icon_ia" />
+                            android:src="@drawable/iatt22" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -152,11 +152,11 @@
                         android:background="#ffffff">
                         <ImageView
                             android:id="@+id/feedback"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:padding="10dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/icon_feedback" />
+                            android:src="@drawable/feedback22" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -193,10 +193,10 @@
                         android:background="#ffffff">
                         <ImageView
                             android:id="@+id/placement"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/icon_placement" />
+                            android:src="@drawable/placement22" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -226,11 +226,11 @@
                         android:background="#ffffff">
                         <ImageView
                             android:id="@+id/holidays"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:padding="10dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/icon_holiday" />
+                            android:src="@drawable/holiday22" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -267,11 +267,11 @@
                         android:background="#ffffff">
                         <ImageView
                             android:id="@+id/annoucements"
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:padding="10dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/icon_announcement" />
+                            android:src="@drawable/announcement22" />
 
                         <TextView
                             android:layout_width="wrap_content"
