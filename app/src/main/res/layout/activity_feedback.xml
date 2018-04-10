@@ -21,6 +21,7 @@
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:text="A>Self-Assessment of Learning Process:"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                         android:textSize="15dp"
                         android:textStyle="bold|italic" />
                     <android.support.v7.widget.CardView
@@ -32,6 +33,7 @@
                             android:layout_height="wrap_content"
                             android:text="1]How do you learn subject?"
                             android:textStyle="bold"
+                            android:textColor="#ffffff"
                             />
                         <TableLayout
                             android:layout_width="match_parent"
@@ -44,29 +46,34 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:id="@+id/rdrgp1"
-                                    android:layout_marginTop="10dp">
+                                    android:layout_marginTop="10dp"
+                                    >
                                     <RadioButton
                                         android:id="@+id/rb1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="a)I Myself prepare the notes"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb2"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="b)I Myself prepare the notes"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb3"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="c)I Myself prepare the notes"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb4"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="d)I Myself prepare the notes"
                                         />
                                 </RadioGroup>
@@ -85,6 +92,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2]Learning from text books"
+                            android:textColor="#ffffff"
                             android:textStyle="bold"
                             />
                         <TableLayout
@@ -100,6 +108,7 @@
                                     android:layout_marginTop="10dp">
                                     <RadioButton
                                         android:id="@+id/rb5"
+                                        android:textColor="#ffffff"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="a)I have purchased books for all subjects"
@@ -107,6 +116,7 @@
                                     <RadioButton
                                         android:id="@+id/rb6"
                                         android:layout_width="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:layout_height="wrap_content"
                                         android:text="b)I have taken books from book bank in college"
                                         />
@@ -114,12 +124,14 @@
                                         android:id="@+id/rb7"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="c)I sit in library and read books from there"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb8"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="d)I do not read text books at all"
                                         />
                                 </RadioGroup>
@@ -138,11 +150,13 @@
                             android:layout_height="wrap_content"
                             android:text="3]Collective learning"
                             android:textStyle="bold"
+                            android:textColor="#ffffff"
                             />
                         <TableLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
+                            android:textColor="#ffffff"
                             android:padding="10dp">
                             <TableRow>
                                 <RadioGroup
@@ -154,24 +168,28 @@
                                         android:id="@+id/rb9"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="a)I discuss my difficulties with friend in the class"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb10"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="b) We have fomulated study group"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb11"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="c)I discuss difficult topics with my senior"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb12"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="d)I approach teachers to solve difficulties"
                                         />
                                 </RadioGroup>
@@ -190,6 +208,7 @@
                             android:layout_height="wrap_content"
                             android:text="4] E-Learning"
                             android:textStyle="bold"
+                            android:textColor="#ffffff"
                             />
                         <TableLayout
                             android:layout_width="match_parent"
@@ -206,25 +225,29 @@
                                         android:id="@+id/rb13"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="a)I use internet for additional informartion,at institute"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb14"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="b) I am a member of web-group"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb15"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
                                         android:text="c) I have internet facility at home"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb16"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="a)I don't take help of internet while learning"
+                                        android:textColor="#ffffff"
+                                        android:text="d)I don't take help of internet while learning"
                                         />
                                 </RadioGroup>
 
@@ -241,6 +264,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="5]How do you prepare yourself for learning "
+                            android:textColor="#ffffff"
                             android:textStyle="bold"
                             />
                         <TableLayout
@@ -259,24 +283,28 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="a)I come prepared for the lecture "
+                                        android:textColor="#ffffff"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb18"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="b)I concentrate fully and listen lecture carefully"
+                                        android:textColor="#ffffff"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb19"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="c)I cannot concentrate fully throughout the lecture"
+                                        android:textColor="#ffffff"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb20"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="d)I do not come prepared or the lecture"
+                                        android:textColor="#ffffff"
                                         />
                                 </RadioGroup>
 
@@ -294,6 +322,7 @@
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
                             android:text="6]My overall % attendance including all subject and kabs is"
+                            android:textColor="#ffffff"
                             />
                         <TableLayout
                             android:layout_width="match_parent"
@@ -311,24 +340,28 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="a)100%"
+                                        android:textColor="#ffffff"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb22"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="b)80%"
+                                        android:textColor="#ffffff"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb23"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="c)60%"
+                                        android:textColor="#ffffff"
                                         />
                                     <RadioButton
                                         android:id="@+id/rb24"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="d)below 60%"
+                                        android:textColor="#ffffff"
                                         />
                                 </RadioGroup>
 
@@ -342,6 +375,7 @@
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:text="B>Assessment of the Faculties teaching in your class"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                         android:textSize="15dp"
                         android:textStyle="bold|italic" />
 
@@ -370,6 +404,7 @@
                                         android:layout_height="wrap_content"
                                         android:text="Subject : "
                                         android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:textColor="#ffffff"
                                         android:textSize="15dp" />
 
                                     <EditText
@@ -378,6 +413,7 @@
                                         android:layout_height="wrap_content"
                                         android:hint="Enter Subject 1  "
                                         android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:textColor="#ffffff"
                                         android:textSize="15dp" />
                                 </TableRow>
 
@@ -388,6 +424,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Lecure : "
+                                        android:textColor="#ffffff"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textSize="15dp" />
 
@@ -396,11 +433,13 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:hint="Enter Lecurer name  "
+                                        android:textColor="#ffffff"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textSize="15dp" />
                                     <EditText
                                         android:id="@+id/lect1rating"
                                         android:hint="1-5"
+                                        android:textColor="#ffffff"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"/>
                                 </TableRow>
@@ -412,6 +451,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Tutorial/Lab: "
+                                        android:textColor="#ffffff"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textSize="15dp" />
 
@@ -420,11 +460,13 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:hint="Enter Tutorial name  "
+                                        android:textColor="#ffffff"
                                         android:textAppearance="?android:attr/textAppearanceLarge"
                                         android:textSize="15dp" />
                                     <EditText
                                         android:id="@+id/tuto1rating"
                                         android:hint="1-5"
+                                        android:textColor="#ffffff"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"/>
                                 </TableRow>
@@ -454,6 +496,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Subject : "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -462,6 +505,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Subject 2  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -474,6 +518,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Lecure : "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -482,11 +527,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Lecurer name  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/lect2rating"
                                 android:hint="1-5"
+                                android:textColor="#ffffff"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -498,6 +545,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Tutorial/Lab: "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -506,11 +554,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Tutorial name  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/tuto2rating"
                                 android:hint="1-5"
+                                android:textColor="#ffffff"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -539,6 +589,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Subject : "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -547,6 +598,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Subject 3  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                         </TableRow>
@@ -558,6 +610,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Lecure : "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -566,11 +619,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Lecurer name  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/lect3rating"
                                 android:hint="1-5"
+                                android:textColor="#ffffff"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -582,6 +637,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Tutorial/Lab: "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -590,11 +646,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Tutorial name  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/tuto3rating"
                                 android:hint="1-5"
+                                android:textColor="#ffffff"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -623,6 +681,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Subject : "
                                 android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#ffffff"
                                 android:textSize="15dp" />
 
                             <EditText
@@ -630,6 +689,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Subject 4  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                         </TableRow>
@@ -641,6 +701,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Lecure : "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -649,11 +710,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Lecurer name  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/lect4rating"
                                 android:hint="1-5"
+                                android:textColor="#ffffff"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -665,6 +728,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Tutorial/Lab: "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -673,11 +737,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Tutorial name  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/tuto4rating"
                                 android:hint="1-5"
+                                android:textColor="#ffffff"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -705,6 +771,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Subject : "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -713,6 +780,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Subject 5  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                         </TableRow>
@@ -724,6 +792,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Lecure : "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -732,11 +801,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Lecurer name  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/lect5rating"
                                 android:hint="1-5"
+                                android:textColor="#ffffff"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -748,6 +819,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Tutorial/Lab: "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -756,11 +828,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Tutorial name  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/tuto5rating"
                                 android:hint="1-5"
+                                android:textColor="#ffffff"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -788,6 +862,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Subject : "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -796,6 +871,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Subject 6  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                         </TableRow>
@@ -807,6 +883,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Lecure : "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -815,11 +892,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Lecurer name  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/lect6rating"
                                 android:hint="1-5"
+                                android:textColor="#ffffff"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -831,6 +910,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Tutorial/Lab: "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
 
@@ -839,11 +919,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Enter Tutorial name  "
+                                android:textColor="#ffffff"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textSize="15dp" />
                             <EditText
                                 android:id="@+id/tuto6rating"
                                 android:hint="1-5"
+                                android:textColor="#ffffff"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </TableRow>
@@ -871,6 +953,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="C>Assessment of the Study Materials:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="15dp"
                 android:textStyle="bold|italic" />
             <android.support.v7.widget.CardView
@@ -888,17 +971,20 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="Quality assessment tool for\n the study material provided "
                             />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="study materials\n provided by \ncourse teacher\n(Grade 4-0)"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="Printed study\n materials distributed \n(Grade 4-0)"/>
                     </TableRow>
                     <TableRow
@@ -907,15 +993,18 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="1)Do They cover complete Syllabus"/>
                         <EditText
                             android:id="@+id/cet1"
                             android:layout_width="wrap_content"
+                            android:textColor="#ffffff"
                             android:layout_height="wrap_content"/>
 
                         <EditText
                             android:id="@+id/cet2"
                             android:layout_width="wrap_content"
+                            android:textColor="#ffffff"
                             android:layout_height="wrap_content"/>
                     </TableRow>
                     <TableRow
@@ -924,13 +1013,16 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="2)Do They have sytematic approach"/>
                         <EditText
                             android:id="@+id/cet3"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <EditText
                             android:id="@+id/cet4"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </TableRow>
@@ -940,13 +1032,16 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="3)Are they simple to comprehand"/>
                         <EditText
                             android:id="@+id/cet5"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <EditText
                             android:id="@+id/cet6"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </TableRow>
@@ -956,13 +1051,16 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="4)Relavance of notes to \nclassroom teaching"/>
                         <EditText
                             android:id="@+id/cet7"
                             android:layout_width="wrap_content"
+                            android:textColor="#ffffff"
                             android:layout_height="wrap_content"/>
                         <EditText
                             android:id="@+id/cet8"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </TableRow>
@@ -972,6 +1070,7 @@
                         android:layout_height="100dp"
                         android:background="#8E24AA"
                         android:hint="Detailed suggestion if any"
+                        android:textColor="#ffffff"
                         android:textSize="15dp"
                         android:layout_marginTop="10dp"/>
                 </TableLayout>
@@ -982,6 +1081,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="D>Assessment of Amenities:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="15dp"
                 android:textStyle="bold|italic" />
             <android.support.v7.widget.CardView
@@ -1001,11 +1101,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Amenities"
+                            android:textColor="#ffffff"
                             />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="Grade  "/>
 
                        <!-- <TextView
@@ -1017,12 +1119,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
+                            android:textColor="#ffffff"
                             android:text="1]Co-operation of non-teaching staff \nfrom administrative office"/>
                         <EditText
                             android:id="@+id/det1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
+                            android:textColor="#ffffff"
                             />
                        <!-- <EditText
                             android:id="@+id/det2"
@@ -1036,9 +1140,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
+                            android:textColor="#ffffff"
                             android:text="2]Co-operation of non-teaching staff from \n Examination cell"/>
                         <EditText
                             android:id="@+id/det2"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1055,9 +1161,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
+                            android:textColor="#ffffff"
                             android:text="3]Co-operation of non-teaching staff from \n Institute Library"/>
                         <EditText
                             android:id="@+id/det3"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1074,9 +1182,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
+                            android:textColor="#ffffff"
                             android:text="3]Co-operation of non-teaching staff from \n Department Laboratory"/>
                         <EditText
                             android:id="@+id/det4"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1093,9 +1203,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="5]cleanliness of classroom"/>
                         <EditText
                             android:id="@+id/det5"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1112,9 +1224,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="6]Drinking water facility"/>
                         <EditText
                             android:id="@+id/det6"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1131,9 +1245,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="7]Upkeep of rest room"/>
                         <EditText
                             android:id="@+id/det7"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1150,9 +1266,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#ffffff"
                             android:text="8]Canteen Facility"/>
                         <EditText
                             android:id="@+id/det8"
+                            android:textColor="#ffffff"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:hint="4-0"
@@ -1173,6 +1291,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Submit"
+                android:background="@color/colorPrimary"
                 android:layout_gravity="center_horizontal"
                 />
 
