@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     Button login;
     RequestQueue requestQueue;
     //String server_url="http://192.168.0.102:80/api/login";
-    String server_url="http://172.16.27.45:80/api";
+    //String server_url="http://192.168.43.218:80/api";
+    String server_url="http://b8012e2d.ngrok.io/api";
     String  semail;
     String spassword;
     String token;
